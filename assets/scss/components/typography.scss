@@ -1,0 +1,123 @@
+h1, h2, h3, h4, h5, h6, p, span, li {
+  cursor: crosshair;
+  font-family: $font-family-sans-serif;
+  color: #212A36;
+
+  a {
+    color: #212A36;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px dotted #212A36;
+
+    &:hover {
+      color: #000000;
+    }
+  }
+}
+
+a{
+  text-decoration: none;
+}
+
+h1 {
+  @include font-size(2.4rem);
+  @include rfs(2.6rem, line-height);
+  font-weight: 600;
+
+  &.lead {
+    @include font-size(4rem);
+    @include rfs(3.2rem, line-height);
+    font-weight: 700;
+
+    @media screen and (max-width: 992px) {
+      @include font-size(3rem);
+      @include rfs(2.4rem, line-height);
+    }
+
+    &.small {
+      @include font-size(2rem);
+      @include rfs(2rem, line-height);
+    }
+  }
+}
+
+h2 {
+  @include font-size(1.6rem);
+  @include rfs(2rem, line-height);
+  font-weight: 600;
+
+  &.lead {
+    @include font-size(2rem);
+    @include rfs(1.2rem, line-height);
+    font-weight: 700;
+  }
+}
+
+h3 {
+  @include font-size(1.2rem);
+  @include rfs(1.4rem, line-height);
+  font-weight: 600;
+}
+
+.lead, .lead > span {
+  font-family: "N27", sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@mixin text-small {
+  font-size: 0.9rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+.tech-stack {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  list-style-type: none;
+  justify-content: space-between;
+  margin-bottom: 0;
+
+  li {
+    color: #AFBFD6;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.tech-stack li, .location-indicator, .text-small {
+  @include text-small;
+}
+
+.code-tag, .line-number__line, .line-number__line span {
+  font-family: "JetBrains Mono", sans-serif;
+  font-weight: 400;
+  color: #AFBFD6;
+  @include font-size(0.9rem);
+  @include rfs(0.9rem, line-height);
+
+  @media screen and (max-width: 992px) {
+    @include font-size(0.8rem);
+    @include rfs(0.8rem, line-height);
+  }
+
+}
+
+.back-link {
+  font-family: $font-family-sans-serif;
+  font-weight: 600;
+  color: #F2F2F2;
+  font-size: 1rem;
+  text-decoration: none;
+  display: flex;
+  align-items: flex-end;
+
+  i {
+    pointer-events: none;
+  }
+
+  &:hover {
+    color: #FFFFFF;
+  }
+}

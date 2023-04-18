@@ -1,0 +1,136 @@
+/* Marchant Web */
+
+html {
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  overscroll-behavior-y: none;
+}
+
+body {
+  overflow-x: hidden !important;
+  overflow-y: hidden;
+  color: #FFFFFF;
+  cursor: crosshair;
+  margin: 0;
+  padding: 0;
+  overscroll-behavior-y: none;
+
+  &.enable-scroll{
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+////////////////////////
+// Fonts & Typography //
+////////////////////////
+
+/* N27 */
+@font-face {
+  font-family: 'N27';
+  src: url('assets/fonts/n27-bold-webfont.eot'),
+  url('assets/fonts/n27-bold-webfont.woff2') format('woff2'),
+  url('assets/fonts/n27-bold-webfont.woff') format('woff'),
+  url('assets/fonts/n27-bold-webfont.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+$font-family-sans-serif: 'Inter', sans-serif;
+$font-family-serif: 'Inter', sans-serif;
+$font-family-base: $font-family-sans-serif;
+$headings-font-family: $font-family-serif;
+$font-size-base: 1rem;
+$line-height-base: 1.6;
+
+////////////////////////////
+// Responsive Breakpoints //
+////////////////////////////
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px,
+        xxxl: 1680px
+);
+
+$container-padding-x: 60px;
+
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 1040px,
+        xl: 1140px,
+        xxl: 1320px,
+        xxxl: 1600px
+);
+
+//////////////////////
+// Spacer Utilities //
+//////////////////////
+
+$spacer: 1rem;
+$spacers: (
+        0: 0,
+        1: $spacer * .25,
+        2: $spacer * .5,
+        3: $spacer,
+        4: $spacer * 1.5,
+        5: $spacer * 3,
+        6: $spacer * 4,
+        7: $spacer * 6,
+        8: $spacer * 8,
+        9: $spacer * 10,
+        10: $spacer * 12,
+        20: $spacer * 24,
+);
+
+$enable-negative-margins: true;
+
+//////////////////////
+// Import Bootstrap //
+//////////////////////
+
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/bootstrap-grid";
+@import "bootstrap/scss/bootstrap-utilities";
+
+//////////////////////////
+// Import Custom Styles //
+//////////////////////////
+
+@import "components/typography";
+@import "components/transitions";
+
+#bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.feed-section__container-padding {
+  width: calc(((100vw - 1600px) / 2) + (var(--bs-gutter-x) * 0.5));
+  height: 10px;
+  display: block;
+  flex: none;
+
+  @media screen and (max-width: 1680px) {
+    width: 30px;
+  }
+
+}

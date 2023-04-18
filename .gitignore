@@ -1,0 +1,16 @@
+node_modules
+*.log*
+.nuxt
+.nitro
+.cache
+.output
+.env
+dist
+.idea\sonarlint
+/.idea/sonarlint
+/.idea/inspectionProfiles
+.idea/inspectionProfiles
+.idea/*
+/tools
+/.idea
+.idea
