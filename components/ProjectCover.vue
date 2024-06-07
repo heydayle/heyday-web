@@ -1,6 +1,11 @@
 <template>
-  <article role="article" :class="elementClasses" tabindex="0" :aria-label="currentPortfolioItem['title']"
-           :aria-description="currentPortfolioItem['lead']">
+  <article
+      role="article"
+      :class="elementClasses"
+      tabindex="0"
+      :aria-label="currentPortfolioItem['title']"
+      :aria-description="currentPortfolioItem['lead']"
+  >
 
     <!-- Title & Stack -->
     <div class="title-bar row justify-content-between align-items-end mb-3 flex-nowrap">
@@ -12,11 +17,15 @@
         </div>
       </div>
       <div class="col-auto justify-content-end d-none d-xl-flex">
-        <CodeLine v-if="props.isFocused" :number="'//'"><span class="code--white"
-                                                              v-for="(stackItem, stackIndex) in currentPortfolioItem['stack']">{{
-            stackItem.name
-          }} <span
-              class="px-1" v-if="stackIndex < currentPortfolioItem['stack'].length - 1"> | </span></span></CodeLine>
+        <CodeLine v-if="props.isFocused" :number="'//'">
+          <span
+              class="code--white"
+              v-for="(stackItem, stackIndex) in currentPortfolioItem['stack']"
+          >
+            {{ stackItem.name }}
+            <span class="px-1" v-if="stackIndex < currentPortfolioItem['stack'].length - 1"> | </span>
+          </span>
+        </CodeLine>
       </div>
     </div>
 
@@ -24,10 +33,12 @@
     <NuxtLink :to="'/portfolio/' + currentPortfolioItem['slug']">
       <div class="project-cover__video-container">
         <i class="fa-sharp fa-regular fa-arrow-up-right fa-3x open-arrow"></i>
-        <video ref="video" :style="elementStyle" class="project-cover__video mouse-md" loop="true" muted
-               :autoplay="isFocused ? true : null" playsinline :poster="currentPortfolioItem['cover']">
-          <source :src="currentPortfolioItem['videoWebm']" type="video/webm">
-          <source :src="currentPortfolioItem['videoMP4']" type="video/mp4">
+        <video
+            ref="video"
+            :style="elementStyle"
+            class="project-cover__video mouse-md"
+            :poster="currentPortfolioItem['cover']"
+        >
         </video>
       </div>
     </NuxtLink>

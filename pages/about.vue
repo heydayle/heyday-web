@@ -15,7 +15,7 @@
                 <StatusIndicator type="dark"/>
               </div>
             </div>
-            <h2 class="my-4" itemprop="description">Junior front end engineer with 2.5+ years building creative websites,
+            <h2 class="my-4" itemprop="description">Middle Front end engineer with 4+ years building creative websites,
               interactive
               experiences
               and custom web software.</h2>

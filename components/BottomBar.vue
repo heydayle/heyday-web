@@ -6,10 +6,10 @@
     </div>
     <div class="col-5 col-xl-4 ms-5 mb-3 me-auto">
       <ul class="tech-stack">
-        <li>UX</li>
         <li>Vue</li>
-        <li>Nuxt</li>
         <li>React</li>
+        <li>Nuxt</li>
+        <li>UX</li>
       </ul>
     </div>
     <div class="col-auto mb-3 d-flex align-items-center">

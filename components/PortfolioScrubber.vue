@@ -1,8 +1,15 @@
 <template>
   <ol class="portfolio-links" :style="{ '--selector-offset': (5 + (selected * 40)) + 'px' }">
     <li v-for="(portfolioItem, index) in portfolioData"
-        :class="{ 'portfolio-links--active': index === selected }"><a href="#" @click.prevent="updateSelected(index)"
-                                                                      class="mouse-sm">{{ index }}</a></li>
+        :class="{ 'portfolio-links--active': index === selected }">
+      <a
+        href="#"
+        class="mouse-sm"
+        @click.prevent="updateSelected(index)"
+      >
+        {{ index }}
+      </a>
+    </li>
   </ol>
 </template>
 

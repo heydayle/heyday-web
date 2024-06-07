@@ -1,7 +1,9 @@
 export const usePortfolio = async (listedOnly = false) => {
     const portfolio = useState('portfolio', () => []);
+    const nuxtConfig = useAppConfig()
+    console.log(nuxtConfig?.projects)
     if (portfolio.value.length === 0) {
-        portfolio.value = await $fetch('https://api.marchantweb.com/portfolio');
+        portfolio.value = nuxtConfig?.projects;
     }
     if(listedOnly){
         return ref(portfolio.value.filter(item => item["listed"]));

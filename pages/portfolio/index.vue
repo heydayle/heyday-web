@@ -8,11 +8,17 @@
         <div class="col-auto d-flex flex-row align-items-center">
 
           <!-- Back to Home -->
-          <NuxtLink class="back-link mouse-md" to="/"><i class="fa-sharp fa-solid fa-arrow-up-left fa-2x pe-3"></i>Home
+          <NuxtLink class="back-link mouse-md" to="/">
+            <i class="fa-sharp fa-solid fa-arrow-up-left fa-2x pe-3"></i>
+            Home
           </NuxtLink>
 
-          <PortfolioScrubber class="ms-6 d-none d-xxl-flex" :portfolioData="portfolioData" :selected="selected"
-                             @updateSelected="updateSelected"/>
+          <PortfolioScrubber
+              class="ms-6 d-none d-xxl-flex"
+              :portfolioData="portfolioData"
+              :selected="selected"
+              @updateSelected="updateSelected"
+          />
 
         </div>
         <div class="col-auto position-relative">
@@ -33,9 +39,14 @@
 
         <div class="feed-section__container-padding"/>
 
-        <ProjectCover :aria-posinset="index" :aria-setsize="portfolioData.length" :portfolioItem="portfolioItem"
-                      :index="index"
-                      v-for="(portfolioItem, index) in portfolioData" :isFocused="index === selected"/>
+        <ProjectCover
+            v-for="(portfolioItem, index) in portfolioData"
+            :aria-posinset="index"
+            :aria-setsize="portfolioData.length"
+            :portfolioItem="portfolioItem"
+            :index="index"
+            :isFocused="index === selected"
+        />
 
         <div class="feed-section__extraElement"/>
 
@@ -50,8 +61,11 @@
       <BottomBar/>
     </div>
 
-    <PortfolioScrubber class="portfolio-links--mobile d-flex d-lg-none" :portfolioData="portfolioData"
-                       :selected="selected" @updateSelected="updateSelected"/>
+    <PortfolioScrubber
+        class="portfolio-links--mobile d-flex d-lg-none"
+        :portfolioData="portfolioData"
+        :selected="selected" @updateSelected="updateSelected"
+    />
 
   </section>
 </template>

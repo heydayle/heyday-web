@@ -97,12 +97,12 @@ useHead({
     {
       hid: 'twitter:site',
       name: 'twitter:site',
-      content: '@marchantweb'
+      content: '@heydayle'
     },
     {
       hid: 'twitter:creator',
       name: 'twitter:creator',
-      content: '@marchantweb'
+      content: '@heydayle'
     },
     {
       hid: 'twitter:url',

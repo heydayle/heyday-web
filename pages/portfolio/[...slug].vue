@@ -41,7 +41,7 @@
               <dt class="mt-4" v-if="currentPortfolioItem['role']">Role</dt>
               <dd v-if="currentPortfolioItem['role']"> {{ currentPortfolioItem['role']}} </dd>
 
-              <dt class="mt-4" v-if="currentPortfolioItem['completed']">Completed</dt>
+              <dt class="mt-4" v-if="currentPortfolioItem['completed']">Timeline</dt>
               <dd v-if="currentPortfolioItem['completed']"> {{ currentPortfolioItem['completed']}} </dd>
 
               <dt class="mt-4" v-if="currentPortfolioItem['awards']">Recognition</dt>
@@ -57,9 +57,8 @@
         <main class="col-12 col-lg-8 order-1 order-lg-2">
           <div class="col-12 col-lg-11 col-xl-10">
             <CodeLine :number="'//'" class="mb-5 mb-lg-4">
-              <span class="code--yellow">npm</span>
-              <span class="code--green">&nbsp;run</span>
-              <span class="code--white">&nbsp;case_study</span>
+              <span class="code--yellow">https://</span>
+              <span class="code--green">{{ currentPortfolioItem['site'] }}</span>
             </CodeLine>
             <h1 class="mb-4 mb-lg-5" data-aos="fade-up">{{ currentPortfolioItem['lead'] }}</h1>
           </div>
