@@ -48,10 +48,10 @@
               <dd v-if="currentPortfolioItem['awards']" v-html="currentPortfolioItem['awards'].replace(/\n/g, '<br />')"></dd>
 
             </dl>
-            <ActionButton to="https://calendly.com/marchantweb/discovery" target="_blank" data-aos="fade-up">
-              <i class="fa-sharp fa-regular fa-calendar-range fa-lg"></i>
-              Book some time
-            </ActionButton>
+<!--            <ActionButton to="https://calendly.com/marchantweb/discovery" target="_blank" data-aos="fade-up">-->
+<!--              <i class="fa-sharp fa-regular fa-calendar-range fa-lg"></i>-->
+<!--              Book some time-->
+<!--            </ActionButton>-->
           </aside>
         </div>
         <main class="col-12 col-lg-8 order-1 order-lg-2">
