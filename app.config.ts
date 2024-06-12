@@ -74,6 +74,90 @@ export default defineAppConfig({
                 },
                 {
                     object: 'block',
+                    id: '8297cd08-c819-4455-bfe6-d3e948e6dc07',
+                    parent: {
+                        type: 'page_id',
+                        page_id: '85808fd2-2277-4eae-a77c-505240ce6787',
+                    },
+                    created_time: '2024-01-23T14:58:00.000Z',
+                    last_edited_time: '2024-03-05T23:57:00.000Z',
+                    created_by: {
+                        object: 'user',
+                        id: '850b2956-a12b-4dd0-a6bd-d72a0f8cd68f',
+                    },
+                    last_edited_by: {
+                        object: 'user',
+                        id: '850b2956-a12b-4dd0-a6bd-d72a0f8cd68f',
+                    },
+                    has_children: false,
+                    archived: false,
+                    in_trash: false,
+                    type: 'paragraph',
+                    paragraph: {
+                        rich_text: [
+                            {
+                                type: 'text',
+                                text: {
+                                    content: '\n' +
+                                        'The DragonX platform includes 3 sites: ',
+                                    link: null,
+                                },
+                                annotations: {
+                                    bold: false,
+                                    italic: false,
+                                    strikethrough: false,
+                                    underline: false,
+                                    code: false,
+                                    color: 'default',
+                                },
+                                plain_text: '\n' +
+                                    'The DragonX platform includes 3 sites: ',
+                                href: null,
+                            },
+                            {
+                                type: 'text',
+                                text: {
+                                    content: '\n' +
+                                        'DragonX website (For investors), DragonX admin (for administration) and DragonS (for introducers or marketers)',
+                                    link: null,
+                                },
+                                annotations: {
+                                    bold: true,
+                                    italic: false,
+                                    strikethrough: false,
+                                    underline: false,
+                                    code: false,
+                                    color: 'default',
+                                },
+                                plain_text: '\n' +
+                                    'DragonX website (For investors), DragonX admin (for administration) and DragonS (for introducers or marketers)',
+                                href: null,
+                            },
+                            {
+                                type: 'text',
+                                text: {
+                                    content: '\n' +
+                                        '. Among them, DragonX web and DragonX admin are the two main websites.',
+                                    link: null,
+                                },
+                                annotations: {
+                                    bold: false,
+                                    italic: false,
+                                    strikethrough: false,
+                                    underline: false,
+                                    code: false,
+                                    color: 'default',
+                                },
+                                plain_text: '\n' +
+                                    '. Among them, DragonX web and DragonX admin are the two main websites.',
+                                href: null,
+                            },
+                        ],
+                        color: 'default',
+                    },
+                },
+                {
+                    object: 'block',
                     id: '1db6580a-87dc-4561-90f8-e6fc40830611',
                     parent: {
                         type: 'page_id',
@@ -350,7 +434,7 @@ export default defineAppConfig({
             listed: true,
             slug: '25fit',
             type: 'Front End Developer',
-            cover: '/projects/25fit.jpg',
+            cover: '/projects/25fit/25fit.jpg',
             client: '25 FIT',
             clientLogo: null,
             partner: null,

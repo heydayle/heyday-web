@@ -1,7 +1,6 @@
 export const usePortfolio = async (listedOnly = false) => {
     const portfolio = useState('portfolio', () => []);
     const nuxtConfig = useAppConfig()
-    console.log(nuxtConfig?.projects)
     if (portfolio.value.length === 0) {
         portfolio.value = nuxtConfig?.projects;
     }
