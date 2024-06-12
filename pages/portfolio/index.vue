@@ -83,11 +83,11 @@ const selected = ref(0);
 const portfolioScrollPercentage = useState('portfolioScrollPercentage', () => 0);
 
 useHead({
-  title: 'Explore Projects | Marchant Web',
+  title: 'Explore Projects | Thinh Le',
   meta: [
     {
       name: 'description',
-      content: 'Senior front end engineer with 10+ years building creative websites, interactive experiences and custom web software.'
+      content: 'Front end engineer with 4+ years building creative websites, interactive experiences and custom web software.'
     }
   ]
 });
