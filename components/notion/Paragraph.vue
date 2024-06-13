@@ -1,7 +1,7 @@
 <template>
   <div class="col-12 col-lg-11 col-xl-9 col-xxl-8">
     <p data-aos="fade-up">
-      <span v-for="item in block['paragraph']['rich_text']" :class="textClasses(item)"
+      <span v-for="item in block['array_text']" :class="textClasses(item)"
             :style="textStyles(item)">
         <span v-if="item.text.link">
           <a :href="item.text.link.url" target="_blank" rel="noopener noreferrer" class="mouse-md">
@@ -38,7 +38,7 @@ const textStyles = (item) => {
 const textClasses = (item) => {
   const annotations = item.annotations;
   return {
-    'text--code': annotations.code
+    'text--code': annotations?.code
   }
 }
 

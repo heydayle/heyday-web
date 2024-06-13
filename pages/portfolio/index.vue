@@ -77,7 +77,10 @@ import {gsap} from "gsap";
 import {Draggable} from "gsap/Draggable";
 import {InertiaPlugin} from "gsap/InertiaPlugin";
 
-const portfolioData = await usePortfolio(true);
+const portfolio = await usePortfolio(true);
+
+const { data: portfolioData } = await portfolio.getAllProjects()
+
 const selected = ref(0);
 
 const portfolioScrollPercentage = useState('portfolioScrollPercentage', () => 0);
@@ -115,7 +118,7 @@ const portfolioItemWidth = computed(() => {
  */
 const updateSelected = (selectedIndex) => {
   selectedIndex = selectedIndex < 0 ? 0 : selectedIndex;
-  selectedIndex = selectedIndex > portfolioData.value.length - 1 ? portfolioData.value.length - 1 : selectedIndex;
+  selectedIndex = selectedIndex > portfolioData.length - 1 ? portfolioData.length - 1 : selectedIndex;
   selected.value = selectedIndex;
   gsap.killTweensOf("#portfolio-feed");
   gsap.to("#portfolio-feed", {
@@ -125,7 +128,7 @@ const updateSelected = (selectedIndex) => {
   });
   gsap.killTweensOf(portfolioScrollPercentage);
   gsap.to(portfolioScrollPercentage, {
-    value: selected.value * (1 / portfolioData.value.length),
+    value: selected.value * (1 / portfolioData.length),
     duration: 0.5,
     ease: "power1.out"
   });
@@ -138,11 +141,11 @@ const updateSelected = (selectedIndex) => {
 const updateDragSelected = function (event) {
   let selectedIndex = Math.floor(Math.abs((this.endX) / portfolioItemWidth.value));
   selectedIndex = selectedIndex < 0 ? 0 : selectedIndex;
-  selectedIndex = selectedIndex > portfolioData.value.length - 1 ? portfolioData.value.length - 1 : selectedIndex;
+  selectedIndex = selectedIndex > portfolioData.length - 1 ? portfolioData.length - 1 : selectedIndex;
   selected.value = selectedIndex;
   gsap.killTweensOf(portfolioScrollPercentage);
   gsap.to(portfolioScrollPercentage, {
-    value: selected.value * (1 / portfolioData.value.length),
+    value: selected.value * (1 / portfolioData.length),
     duration: 2,
     ease: "power1.out"
   });
@@ -198,7 +201,7 @@ onMounted(() => {
       return;
     }
     if (event.key === 'Enter') {
-      return navigateTo('/portfolio/' + portfolioData.value[selected.value]["slug"]);
+      return navigateTo('/portfolio/' + portfolioData[selected.value]["slug"]);
     }
   });
 
@@ -220,7 +223,7 @@ function setupDraggable() {
   }
   nextTick(() => {
     const offsets = [];
-    for (let i = 0; i < portfolioData.value.length; i++) {
+    for (let i = 0; i < portfolioData.length; i++) {
       offsets.push((i * portfolioItemWidth.value) * -1);
     }
     const container = document.querySelector("#portfolio-feed");
@@ -237,7 +240,7 @@ function setupDraggable() {
       inertia: true,
       bounds: {
         minX: 0,
-        maxX: portfolioItemWidth.value * (portfolioData.value.length - 1) * -1
+        maxX: portfolioItemWidth.value * (portfolioData.length - 1) * -1
       },
       //onDrag: updateDragSelected,
       onDragEnd: updateDragSelected,

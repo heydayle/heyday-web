@@ -1,10 +1,10 @@
 <template>
   <section v-once>
     <div v-for="block in blocks" :key="block.id">
-      <NotionHeading :block="block" v-if="block.type === 'heading_2'"/>
-      <NotionImage :block="block" v-if="block.type === 'image'"/>
-      <NotionParagraph :block="block" v-if="block.type === 'paragraph'"/>
-      <NotionQuote :block="block" v-if="block.type === 'quote'"/>
+<!--      <NotionHeading :block="block" v-if="block.block_type === 'heading_2'"/>-->
+      <NotionImage :block="block" v-if="block['content_type'] === 'image'"/>
+      <NotionParagraph :block="block" v-if="block['content_type'] === 'paragraph'"/>
+<!--      <NotionQuote :block="block" v-if="block.block_type === 'quote'"/>-->
     </div>
   </section>
 </template>

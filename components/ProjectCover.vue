@@ -13,7 +13,7 @@
         <h2 class="lead pb-1 pe-3 d-inline-block mb-0 ps-4 ps-0" style="color: #F2F2F2">{{ displayIndex }}.</h2>
         <div class="d-inline-block">
           <span class="project-cover__type text-small mb-0 d-block">{{ currentPortfolioItem["type"] }}</span>
-          <h2 class="project-cover__title mb-0">{{ currentPortfolioItem["title"] }}</h2>
+          <h2 class="project-cover__title mb-0">{{ currentPortfolioItem["name"] }}</h2>
         </div>
       </div>
       <div class="col-auto justify-content-end d-none d-xl-flex">

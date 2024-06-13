@@ -14,12 +14,12 @@
       <!-- Hero-->
       <div class="row gx-6 mt-5 mt-lg-6">
         <div class="col-12 col-lg-4">
-          <CodeTag class="mb-2 mb-lg-3">{{ currentPortfolioItem['type'] }}</CodeTag>
-          <h1 class="mb-3 mb-lg-10 project__name"> {{ currentPortfolioItem['title'] }} </h1>
+          <CodeTag class="mb-2 mb-lg-3">{{ currentPortfolio[0]['role'] }}</CodeTag>
+          <h1 class="mb-3 mb-lg-10 project__name"> {{ currentPortfolio[0]['name'] }} </h1>
           <NuxtLink class="back-link mouse-md mb-5 mb-lg-0" to="/portfolio"><i class="fa-sharp fa-solid fa-arrow-up-left fa-2x pe-3"></i>Back to Explore Projects</NuxtLink>
         </div>
         <div class="col">
-          <video class="mouse-md" loop="true" muted autoplay playsinline :poster="currentPortfolioItem['cover']" data-aos="zoom-in-down">
+          <video class="mouse-md" loop="true" muted autoplay playsinline :poster="currentPortfolio[0]['cover']" data-aos="zoom-in-down">
             <source :src="currentPortfolioItem['videoWebm']" type="video/webm">
             <source :src="currentPortfolioItem['videoMP4']" type="video/mp4">
           </video>
@@ -32,20 +32,20 @@
             <h3 class="mb-5" data-aos="fade-up">Details</h3>
             <dl class="mb-5 d-block" data-aos="fade-up">
 
-              <dt v-if="currentPortfolioItem['client']">Client</dt>
-              <dd v-if="currentPortfolioItem['client']"> {{ currentPortfolioItem['client']}} </dd>
+              <dt v-if="currentPortfolio[0]['client']">Client</dt>
+              <dd v-if="currentPortfolio[0]['client']"> {{ currentPortfolio[0]['client']}} </dd>
 
-              <dt class="mt-4" v-if="currentPortfolioItem['partner']">Partner</dt>
-              <dd v-if="currentPortfolioItem['partner']"> {{ currentPortfolioItem['partner']}} </dd>
+              <dt class="mt-4" v-if="currentPortfolio[0]['partner']">Partner</dt>
+              <dd v-if="currentPortfolio[0]['partner']"> {{ currentPortfolio[0]['partner']}} </dd>
 
-              <dt class="mt-4" v-if="currentPortfolioItem['role']">Role</dt>
-              <dd v-if="currentPortfolioItem['role']"> {{ currentPortfolioItem['role']}} </dd>
+              <dt class="mt-4" v-if="currentPortfolio[0]['role']">Role</dt>
+              <dd v-if="currentPortfolio[0]['role']"> {{ currentPortfolio[0]['role'] }} </dd>
 
-              <dt class="mt-4" v-if="currentPortfolioItem['completed']">Timeline</dt>
-              <dd v-if="currentPortfolioItem['completed']"> {{ currentPortfolioItem['completed']}} </dd>
+              <dt class="mt-4" v-if="currentPortfolio[0]['time']">Timeline</dt>
+              <dd v-if="currentPortfolio[0]['time']"> {{ currentPortfolio[0]['time']}} </dd>
 
-              <dt class="mt-4" v-if="currentPortfolioItem['awards']">Recognition</dt>
-              <dd v-if="currentPortfolioItem['awards']" v-html="currentPortfolioItem['awards'].replace(/\n/g, '<br />')"></dd>
+              <dt class="mt-4" v-if="currentPortfolio[0]['awards']">Recognition</dt>
+              <dd v-if="currentPortfolio[0]['awards']" v-html="currentPortfolio[0]['awards'].replace(/\n/g, '<br />')"></dd>
 
             </dl>
 <!--            <ActionButton to="https://calendly.com/marchantweb/discovery" target="_blank" data-aos="fade-up">-->
@@ -58,11 +58,11 @@
           <div class="col-12 col-lg-11 col-xl-10">
             <CodeLine :number="'//'" class="mb-5 mb-lg-4">
               <span class="code--yellow">https://</span>
-              <span class="code--green">{{ currentPortfolioItem['site'] }}</span>
+              <span class="code--green">{{ currentPortfolio[0]['site'] }}</span>
             </CodeLine>
             <h1 class="mb-4 mb-lg-5" data-aos="fade-up">{{ currentPortfolioItem['lead'] }}</h1>
           </div>
-          <NotionContent :blocks="currentPortfolioItem['pageContent']"/>
+          <NotionContent :blocks="currentPortfolioItem"/>
           <p class="mt-7 mt-xxl-8 mt-xxxl-9 text-small text-end copyright d-none d-lg-block">Copyright © {{new Date().getFullYear()}} Thinh Le, LLC. All rights reserved.</p>
         </main>
       </div>
@@ -77,27 +77,26 @@
 const route = useRoute();
 const portfolioData = await usePortfolio();
 
-const currentPortfolioItem = computed(() => {
-  return portfolioData.value[portfolioData.value.findIndex(project => project["slug"] === route.params["slug"][0])];
-});
+const { data: currentPortfolioItem } = await portfolioData.getProjectBySlug(route.params.slug[0])
+const { data: currentPortfolio } = await portfolioData.getAllProjects(route.params.slug[0])
 
 useHead({
-  title: 'Case Study: ' + currentPortfolioItem.value['title'] + ', ' + currentPortfolioItem.value['type'] + ' | ' + 'Marchant Web',
+  title: 'Case Study: ' + currentPortfolio[0]['name'] + ', ' + currentPortfolio[0]['role'] + ' | ' + 'Thinh Le',
   meta: [
-    { hid: 'description', name: 'description', content:  currentPortfolioItem.value['lead'] },
-    { hid: 'og:title', property: 'og:title', content: currentPortfolioItem.value['title'] },
-    { hid: 'og:url', property: 'og:url', content: 'https://marchantweb.com' + route.fullPath },
-    { hid: 'og:description', property: 'og:description', content: currentPortfolioItem.value['lead'] },
-    { hid: 'og:image', property: 'og:image', content: currentPortfolioItem.value['cover']},
+    { hid: 'description', name: 'description', content:  currentPortfolioItem['lead'] },
+    { hid: 'og:title', property: 'og:title', content: currentPortfolioItem['title'] },
+    { hid: 'og:url', property: 'og:url', content: 'https://thinh.io.vn' + route.fullPath },
+    { hid: 'og:description', property: 'og:description', content: currentPortfolioItem['lead'] },
+    { hid: 'og:image', property: 'og:image', content: currentPortfolio[0]['cover']},
 
     // twitter card
-    { hid: "twitter:title", name: "twitter:title", content: currentPortfolioItem.value['title'] },
-    { hid: "twitter:url", name: "twitter:url", content: 'https://marchantweb.com' + route.fullPath },
-    { hid: 'twitter:description', name: 'twitter:description', content: currentPortfolioItem.value['lead'] },
-    { hid: "twitter:image", name: "twitter:image", content: currentPortfolioItem.value['cover']},
+    { hid: "twitter:title", name: "twitter:title", content: currentPortfolio[0]['name'] },
+    { hid: "twitter:url", name: "twitter:url", content: 'https://thinh.io.vn' + route.fullPath },
+    { hid: 'twitter:description', name: 'twitter:description', content: currentPortfolioItem['lead'] },
+    { hid: "twitter:image", name: "twitter:image", content: currentPortfolio[0]['cover']},
   ],
   link: [
-    { hid: "canonical", rel: "canonical", href: 'https://marchantweb.com' + route.fullPath },
+    { hid: "canonical", rel: "canonical", href: 'https://thinh.io.vn' + route.fullPath },
   ],
   bodyAttrs: {
     class: 'enable-scroll'

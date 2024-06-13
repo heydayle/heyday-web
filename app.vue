@@ -146,14 +146,4 @@ useHead({
   ],
 });
 
-const projects = ref([])
-const client = useSupabaseClient()
-
-// const { data } = await useFetch('/api/projects')
-
-useAsyncData('projects', async () => {
-  const { data } = await client.from('projects').select('*')
-  projects.value = data
-})
-
 </script>
