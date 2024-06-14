@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@nuxtjs/supabase": "^1.2.2",
+    "@nuxtjs/tailwindcss": "^6.12.0",
     "@vueuse/core": "^9.9.0",
     "aos": "^2.3.4",
     "gsap": "npm:@gsap/shockingly@^3.11.4",

@@ -14,6 +14,9 @@ export const usePortfolio = async (listedOnly = false) => {
     const getProjectBySlug = (slug) => {
         return client.from('contents').select().eq('slug', slug)
     }
+    const getAbout = () => {
+        return client.from('about').select()
+    }
 
     if (portfolio.value.length === 0) {
         portfolio.value = nuxtConfig?.projects;
@@ -24,6 +27,7 @@ export const usePortfolio = async (listedOnly = false) => {
     return {
         getAllProjects,
         getProjectBySlug,
+        getAbout,
         portfolio
     };
 }

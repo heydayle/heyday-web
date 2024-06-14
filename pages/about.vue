@@ -15,26 +15,9 @@
                 <StatusIndicator type="dark"/>
               </div>
             </div>
-            <h2 class="my-4" itemprop="description">Middle Front end engineer with 4+ years building creative websites,
-              interactive
-              experiences
-              and custom web software.</h2>
+            <h2 class="my-4" itemprop="description">{{ dataAbout[0]['title'] }}</h2>
             <div itemprop="knowsAbout">
-              <p>
-                Hey I’m Thinh, a creative front end engineer based in Ho Chi Minh, Vietnam. I'm passionate about creating
-                incredible user experiences with web technology. I specialize in programming with <a
-                  href="https://vuejs.org/" target="_blank" class="mouse-sm">Vue</a>,
-                <a href="https://nuxt.com/" target="_blank" class="mouse-sm">Nuxt</a>, and <a
-                  href="https://electronJS.org/"
-                  target="_blank"
-                  class="mouse-sm">React</a>
-              </p>
-              <p>
-                I love writing code but I'm also experienced in UX consulting, with a keen eye for detail and an
-                understanding of interaction design and best practices. I’ve worked on many projects where I start early
-                in
-                the discovery process, guide and design the UX from the ground up, and then get to work building it.
-              </p>
+              {{ dataAbout[0]['summary'] }}
             </div>
 <!--            <h3 class="mt-5 mb-4">Clients &amp; Partners</h3>-->
 <!--            <p class="mb-4">-->
@@ -60,14 +43,20 @@
 <!--            </div>-->
 <!--          </div>-->
           <div class="col-12 col-md-8 col-lg-7 col-xl-6 col-xxl-5 mb-4 mb-lg-8">
-            <h3 class="mt-5 mb-4">Freelancing &amp; Consulting</h3>
-            <p>
-              <strong>I specialize in expert consulting, UX design, and front end programming for agencies that are building cutting-edge web experiences for their clients.</strong> From solo work to supporting your team as a technical lead, I'm here to help;
-              working efficiently and collaboratively to bring each project to life.
-            </p>
-            <p>My hourly rate for work-for-hire <em>(UX design and development)</em> is $20/hr., whereas consulting is
-              billed at $40/hr. I’m always happy to provide an estimate for any project following an initial discovery
-              call.</p>
+            <div class="flex w-full justify-between">
+              <div class="flex-1">
+                <h3 class="mt-5 mb-4">
+                  Technical skills
+                </h3>
+                <Skills :skills="dataAbout[0]['skills']"/>
+              </div>
+              <div class="flex-1">
+                <h3 class="mt-5 mb-4">
+                  Experience
+                </h3>
+                <Experience :experiences="dataAbout[0]['experience']"/>
+              </div>
+            </div>
             <h3 class="mt-5 mb-4">
               Get in Touch
             </h3>
@@ -91,6 +80,8 @@
 
 <script setup>
 
+import {usePortfolio} from "~/composables/usePortfolio";
+
 useHead({
   title: 'Hey, I\'m Thinh Le | Heyday Web',
   meta: [
@@ -103,6 +94,10 @@ useHead({
     class: 'enable-scroll fixed-webgl'
   }
 });
+
+const portfolioData = await usePortfolio();
+
+const { data: dataAbout } = await portfolioData.getAbout()
 
 </script>
 
