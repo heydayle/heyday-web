@@ -9,16 +9,16 @@ interface IProps {
       database: string
       other: string
     }
-  }[]
+  }
 }
 defineProps<IProps>()
 </script>
 
 <template>
   <div v-for="(skill, index) in skills" :key="index">
-    {{ skill.label }}
+    {{ skill['label'] }}
     <ul class="py-2 px-4 list-disc">
-      <li v-for="item in skill.value" v-html="item"/>
+      <li v-for="item in skill['value']" v-html="item"/>
     </ul>
   </div>
 </template>
