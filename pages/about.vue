@@ -97,7 +97,7 @@ useHead({
 
 const portfolioData = await usePortfolio();
 
-const { data: dataAbout } = await portfolioData.getAbout()
+const dataAbout= await portfolioData.getAbout()
 
 </script>
 

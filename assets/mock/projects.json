@@ -1,0 +1,134 @@
+[
+    {
+        "id": 111111,
+        "created_at": "2024-06-12T07:55:57+00:00",
+        "name": "DragonX Platform",
+        "title": "Building the new platform for Dragon Capital.",
+        "time": "Jan 2021 - Mar 2023",
+        "contents": [
+            {
+                "content": "this is content 1",
+                "position": 1
+            },
+            {
+                "content": "this is content 1",
+                "position": 2
+            },
+            {
+                "content": "this is content 2",
+                "position": 2
+            }
+        ],
+        "images": "/projects/dragonx/dragonx.png",
+        "cover": "/projects/dragonx/dragonx.jpg",
+        "site": "dragonx.com.vn",
+        "role": "Frontend Developer",
+        "client": "Dragon Capital",
+        "slug": "dragonx",
+        "stack": [
+            {
+                "id": "923a339b-6c21-4777-a18d-99d6525c8840",
+                "name": "Vue",
+                "color": "purple"
+            },
+            {
+                "id": "923a339b-6c21-4777-a18d-99d6525c8840",
+                "name": "Composition API",
+                "color": "purple"
+            }
+        ]
+    },
+    {
+        "id": 123213,
+        "created_at": "2024-06-12T08:56:13+00:00",
+        "name": "25 FIT Platform",
+        "title": "Building the new platform for 25 FIT.",
+        "time": "Jun 2023 - Dec 2023",
+        "contents": 12311,
+        "images": "qeqwe",
+        "cover": "/projects/25fit/25fit.jpg",
+        "site": "25fit.com",
+        "role": "Frontend Developer",
+        "client": "25 FIT",
+        "slug": "25fit",
+        "stack": [
+            {
+                "id": "923a339b-6c21-4777-a18d-99d6525c8840",
+                "name": "Nuxt",
+                "color": "green"
+            },
+            {
+                "id": "923a339b-6c21-4777-a18d-99d6525c8840",
+                "name": "Vue",
+                "color": "green"
+            },
+            {
+                "id": "923a339b-6c21-4777-a18d-99d6525c8840",
+                "name": "Composition API",
+                "color": "purple"
+            }
+        ]
+    },
+    {
+        "id": 1312386,
+        "created_at": "2024-06-13T08:21:55.225654+00:00",
+        "name": "Visitnhatrangbay.com",
+        "title": "Building the travel website",
+        "time": "Apr 2023 - Jun 2023",
+        "contents": 121312,
+        "images": null,
+        "cover": "/projects/visitnhatrang/cover.png",
+        "site": "visitnhatrangbay.com",
+        "role": "Frontend Developer",
+        "client": "Visitnhatrangbay.com",
+        "slug": "visitnhatrangbay",
+        "stack": [
+            {
+                "id": "923a339b-6c21-4777-a18d-99d6525c8840",
+                "name": "Nuxt",
+                "color": "green"
+            },
+            {
+                "id": "923a339b-6c21-4777-a18d-99d6525c8840",
+                "name": "Vue",
+                "color": "green"
+            },
+            {
+                "id": "923a339b-6c21-4777-a18d-99d6525c8840",
+                "name": "Composition API",
+                "color": "purple"
+            }
+        ]
+    },
+    {
+        "id": 1312386,
+        "created_at": "2024-06-13T08:21:55.225654+00:00",
+        "name": "METALOOK",
+        "title": "Building news and blockchain",
+        "time": "Jun 2024 - Apr 2024",
+        "contents": 121312,
+        "images": "/metalook/metalook.jpg",
+        "cover": "/metalook/metalook.jpg",
+        "site": "metalook.com",
+        "role": "Frontend Developer",
+        "client": "METALOOK",
+        "slug": "metalook",
+        "stack": [
+            {
+                "id": "923a339b-6c21-4777-a18d-99d6525c8840",
+                "name": "Nuxt",
+                "color": "green"
+            },
+            {
+                "id": "923a339b-6c21-4777-a18d-99d6525c8840",
+                "name": "Vue",
+                "color": "green"
+            },
+            {
+                "id": "923a339b-6c21-4777-a18d-99d6525c8840",
+                "name": "Composition API",
+                "color": "purple"
+            }
+        ]
+    }
+]

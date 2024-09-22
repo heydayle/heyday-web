@@ -77,8 +77,11 @@
 const route = useRoute();
 const portfolioData = await usePortfolio();
 
-const { data: currentPortfolioItem } = await portfolioData.getProjectBySlug(route.params.slug[0])
-const { data: currentPortfolio } = await portfolioData.getAllProjects(route.params.slug[0])
+// const { data: currentPortfolioItem } = await portfolioData.getProjectBySlug(route.params.slug[0])
+// const { data: currentPortfolio } = await portfolioData.getAllProjects(route.params.slug[0])
+
+const currentPortfolioItem = portfolioData.getProjectBySlug(route.params.slug[0])
+const currentPortfolio = portfolioData.getAllProjects(route.params.slug[0])
 
 useHead({
   title: 'Case Study: ' + currentPortfolio[0]['name'] + ', ' + currentPortfolio[0]['role'] + ' | ' + 'Thinh Le',

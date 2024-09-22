@@ -79,7 +79,8 @@ import {InertiaPlugin} from "gsap/InertiaPlugin";
 
 const portfolio = await usePortfolio(true);
 
-const { data: portfolioData } = await portfolio.getAllProjects()
+const portfolioData = portfolio.projectsData
+
 
 const selected = ref(0);
 

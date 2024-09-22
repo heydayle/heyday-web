@@ -1,0 +1,483 @@
+{
+    "dragonx" : [
+        {
+          "id": 1,
+          "created_at": "2024-06-13T05:56:25+00:00",
+          "project_id": 111111,
+          "slug": "dragonx",
+          "content_type": "paragraph",
+          "text": "",
+          "annotations": null,
+          "href": null,
+          "color": "",
+          "array_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "DragonX is a fund investment app launched in 2021 by Dragon Capital(DCVFM). It’s designed to enhance user experience and meet individual investors’ needs. Key features include a user-friendly interface, easy account opening via eKYC and e-signature, advanced security standards, and integration of investment insights and educational content.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "DragonX is a fund investment app launched in 2021 by Dragon Capital(DCVFM). It’s designed to enhance user experience and meet individual investors’ needs. Key features include a user-friendly interface, easy account opening via eKYC and e-signature, advanced security standards, and integration of investment insights and educational content.",
+              "href": null
+            }
+          ],
+          "order": 1,
+          "block_type": "paragraph",
+          "image": null
+        },
+        {
+          "id": 2,
+          "created_at": "2024-06-13T06:01:41.235091+00:00",
+          "project_id": 111111,
+          "slug": "dragonx",
+          "content_type": "paragraph",
+          "text": "",
+          "annotations": null,
+          "href": null,
+          "color": "",
+          "array_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "\nThe DragonX platform includes 3 sites: ",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "\nThe DragonX platform includes 3 sites: ",
+              "href": null
+            },
+            {
+              "type": "text",
+              "text": {
+                "content": "\nDragonX website (For investors), DragonX admin (for administration) and DragonS (for introducers or marketers)",
+                "link": null
+              },
+              "annotations": {
+                "bold": true,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "\nDragonX website (For investors), DragonX admin (for administration) and DragonS (for introducers or marketers)",
+              "href": null
+            },
+            {
+              "type": "text",
+              "text": {
+                "content": "\n. Among them, DragonX web and DragonX admin are the two main websites.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "\n. Among them, DragonX web and DragonX admin are the two main websites.",
+              "href": null
+            }
+          ],
+          "order": 2,
+          "block_type": "paragraph",
+          "image": null
+        },
+        {
+          "id": 3,
+          "created_at": "2024-06-13T07:03:46.847994+00:00",
+          "project_id": 111111,
+          "slug": "dragonx",
+          "content_type": "image",
+          "text": null,
+          "annotations": null,
+          "href": null,
+          "color": "default",
+          "array_text": null,
+          "order": 3,
+          "block_type": "file",
+          "image": {
+            "file": {
+              "url": "/projects/dragonx/home.png",
+              "expiry_time": "2024-06-06T23:29:11.914Z"
+            },
+            "type": "file",
+            "caption": []
+          }
+        },
+        {
+          "id": 4,
+          "created_at": "2024-06-13T07:10:54.160166+00:00",
+          "project_id": 111111,
+          "slug": "dragonx",
+          "content_type": "image",
+          "text": null,
+          "annotations": null,
+          "href": null,
+          "color": "default",
+          "array_text": null,
+          "order": 4,
+          "block_type": "file",
+          "image": {
+            "file": {
+              "url": "/projects/dragonx/fund-detail.png",
+              "expiry_time": "2024-06-06T23:29:11.927Z"
+            },
+            "type": "file",
+            "caption": [
+              {
+                "href": null,
+                "text": {
+                  "link": null,
+                  "content": "Fund detail"
+                },
+                "type": "text",
+                "plain_text": "Fund detail",
+                "annotations": {
+                  "bold": false,
+                  "code": false,
+                  "color": "default",
+                  "italic": false,
+                  "underline": false,
+                  "strikethrough": false
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": 5,
+          "created_at": "2024-06-13T07:12:15.237264+00:00",
+          "project_id": 111111,
+          "slug": "dragonx",
+          "content_type": "image",
+          "text": null,
+          "annotations": null,
+          "href": null,
+          "color": "default",
+          "array_text": null,
+          "order": 5,
+          "block_type": "file",
+          "image": {
+            "file": {
+              "url": "/projects/dragonx/portfolio.png",
+              "expiry_time": "2024-06-06T23:29:12.008Z"
+            },
+            "type": "file",
+            "caption": [
+              {
+                "href": null,
+                "text": {
+                  "link": null,
+                  "content": "Portfolio screen"
+                },
+                "type": "text",
+                "plain_text": "Portfolio screen",
+                "annotations": {
+                  "bold": false,
+                  "code": false,
+                  "color": "default",
+                  "italic": false,
+                  "underline": false,
+                  "strikethrough": false
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": 6,
+          "created_at": "2024-06-13T07:17:16.938113+00:00",
+          "project_id": 111111,
+          "slug": "dragonx",
+          "content_type": "image",
+          "text": null,
+          "annotations": null,
+          "href": null,
+          "color": null,
+          "array_text": null,
+          "order": 6,
+          "block_type": "file",
+          "image": {
+            "file": {
+              "url": "/projects/dragonx/buy.png",
+              "expiry_time": "2024-06-06T23:29:11.979Z"
+            },
+            "type": "file",
+            "caption": [
+              {
+                "href": null,
+                "text": {
+                  "link": null,
+                  "content": "Transaction screen"
+                },
+                "type": "text",
+                "plain_text": "Transaction screen",
+                "annotations": {
+                  "bold": false,
+                  "code": false,
+                  "color": "default",
+                  "italic": false,
+                  "underline": false,
+                  "strikethrough": false
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": 7,
+          "created_at": "2024-06-13T07:21:03.389983+00:00",
+          "project_id": 111111,
+          "slug": "dragonx",
+          "content_type": "image",
+          "text": null,
+          "annotations": null,
+          "href": null,
+          "color": null,
+          "array_text": null,
+          "order": 7,
+          "block_type": "file",
+          "image": {
+            "file": {
+              "url": "/projects/dragonx/dragon-lib.png",
+              "expiry_time": "2024-06-06T23:29:11.993Z"
+            },
+            "type": "file",
+            "caption": [
+              {
+                "href": null,
+                "text": {
+                  "link": null,
+                  "content": "Dragon library screen"
+                },
+                "type": "text",
+                "plain_text": "Dragon library screen",
+                "annotations": {
+                  "bold": false,
+                  "code": false,
+                  "color": "default",
+                  "italic": false,
+                  "underline": false,
+                  "strikethrough": false
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": 8,
+          "created_at": "2024-06-13T07:21:48.547295+00:00",
+          "project_id": 111111,
+          "slug": "dragonx",
+          "content_type": "image",
+          "text": null,
+          "annotations": null,
+          "href": null,
+          "color": null,
+          "array_text": null,
+          "order": 8,
+          "block_type": "file",
+          "image": {
+            "file": {
+              "url": "/projects/dragonx/history.png",
+              "expiry_time": "2024-06-06T23:29:11.993Z"
+            },
+            "type": "file",
+            "caption": [
+              {
+                "href": null,
+                "text": {
+                  "link": null,
+                  "content": "History screen"
+                },
+                "type": "text",
+                "plain_text": "History screen",
+                "annotations": {
+                  "bold": false,
+                  "code": false,
+                  "color": "default",
+                  "italic": false,
+                  "underline": false,
+                  "strikethrough": false
+                }
+              }
+            ]
+          }
+        }
+      ],
+    "25fit": [
+        {
+          "id": 9,
+          "created_at": "2024-06-13T07:28:46.87894+00:00",
+          "project_id": 123213,
+          "slug": "25fit",
+          "content_type": "paragraph",
+          "text": null,
+          "annotations": null,
+          "href": null,
+          "color": null,
+          "array_text": [
+            {
+              "href": null,
+              "text": {
+                "link": null,
+                "content": "An innovative gym business based in Vietnam, pioneering the use of Electric Muscle Stimulation (EMS) technology to revolutionize fitness training. With a focus on efficiency and convenience, the core offering users to book personalized training sessions through a mobile app, choosing the location, training objectives, and suit size. Cutting-edge system streamlines coach assignments, session management, and payment processing."
+              },
+              "type": "text",
+              "plain_text": "An innovative gym business based in Vietnam, pioneering the use of Electric Muscle Stimulation (EMS) technology to revolutionize fitness training. With a focus on efficiency and convenience, the core offering users to book personalized training sessions through a mobile app, choosing the location, training objectives, and suit size. Cutting-edge system streamlines coach assignments, session management, and payment processing.",
+              "annotations": {
+                "bold": false,
+                "code": false,
+                "color": "default",
+                "italic": false,
+                "underline": false,
+                "strikethrough": false
+              }
+            }
+          ],
+          "order": 9,
+          "block_type": "paragraph",
+          "image": null
+        },
+        {
+          "id": 11,
+          "created_at": "2024-06-13T09:12:01.693101+00:00",
+          "project_id": 123213,
+          "slug": "25fit",
+          "content_type": "image",
+          "text": null,
+          "annotations": null,
+          "href": null,
+          "color": null,
+          "array_text": null,
+          "order": null,
+          "block_type": "file",
+          "image": {
+            "file": {
+              "url": "https://19jpsa47pdyffhzs.public.blob.vercel-storage.com/25fit/EMS-Training.png",
+              "expiry_time": "2024-06-06T23:29:11.993Z"
+            },
+            "type": "file",
+            "caption": [
+              {
+                "href": null,
+                "text": {
+                  "link": null,
+                  "content": "EMS training screen"
+                },
+                "type": "text",
+                "plain_text": "EMS training screen",
+                "annotations": {
+                  "bold": false,
+                  "code": false,
+                  "color": "default",
+                  "italic": false,
+                  "underline": false,
+                  "strikethrough": false
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": 10,
+          "created_at": "2024-06-13T07:30:47.12635+00:00",
+          "project_id": 123213,
+          "slug": "25fit",
+          "content_type": "image",
+          "text": null,
+          "annotations": null,
+          "href": null,
+          "color": null,
+          "array_text": null,
+          "order": null,
+          "block_type": "file",
+          "image": {
+            "file": {
+              "url": "https://19jpsa47pdyffhzs.public.blob.vercel-storage.com/25fit/home.png",
+              "expiry_time": "2024-06-06T23:29:11.914Z"
+            },
+            "type": "file",
+            "caption": [
+              {
+                "href": null,
+                "text": {
+                  "link": null,
+                  "content": "Homepage"
+                },
+                "type": "text",
+                "plain_text": "Homepage",
+                "annotations": {
+                  "bold": false,
+                  "code": false,
+                  "color": "default",
+                  "italic": false,
+                  "underline": false,
+                  "strikethrough": false
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": 12,
+          "created_at": "2024-06-13T09:22:14.735368+00:00",
+          "project_id": 123213,
+          "slug": "25fit",
+          "content_type": "image",
+          "text": null,
+          "annotations": null,
+          "href": null,
+          "color": null,
+          "array_text": null,
+          "order": null,
+          "block_type": "file",
+          "image": {
+            "file": {
+              "url": "https://19jpsa47pdyffhzs.public.blob.vercel-storage.com/25fit/success-story.png",
+              "expiry_time": "2024-06-06T23:29:11.993Z"
+            },
+            "type": "file",
+            "caption": [
+              {
+                "href": null,
+                "text": {
+                  "link": null,
+                  "content": "Success story"
+                },
+                "type": "text",
+                "plain_text": "Success story",
+                "annotations": {
+                  "bold": false,
+                  "code": false,
+                  "color": "default",
+                  "italic": false,
+                  "underline": false,
+                  "strikethrough": false
+                }
+              }
+            ]
+          }
+        }
+      ],
+    "visitnhatrangbay": [],
+    "metalook": []
+}
