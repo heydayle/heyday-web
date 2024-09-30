@@ -43,8 +43,8 @@
         "programingLanguage": {
           "label": "Programing Language",
           "value": [
-            "<strong>Javascrip</strong>",
-            "<strong>Typescrip</strong>"
+            "<strong>Javascript</strong>",
+            "<strong>Typescript</strong>"
           ]
         },
         "framework": {
