@@ -63,7 +63,7 @@
             <p class="mb-5">
               Thanks for reading a little bit about me. I’m always happy to chat and provide any helpful advice that I
               can. You can schedule a discovery call to see if we’re a good fit, or just email at <a
-                href="mailto:hungthinh.ckc@gmail.com" class="mouse-sm" itemprop="email">hungthinh.ckc@gmail.com</a>.
+                href="mailto:hungthinh.ckc@gmail.com" class="mouse-sm" itemprop="email">hungthinh.ckc@gmail.com</a> or my Github <a href="https://github.com/heydayle" target="_blank" class="mouse-sm">heydayle</a>.
             </p>
             <ActionButton to="/contact" data-aos="fade-up" class="d-none d-lg-block">
               <i class="fa-sharp fa-solid fa-comment"></i>
