@@ -3,7 +3,7 @@
       "id": "aec65d20-bab4-4a27-9759-1048b89982ba",
       "created_at": "2024-06-14T02:26:24.15519+00:00",
       "fullName": "Thinh Le",
-      "title": "Front-End Developer",
+      "title": "Front-End Engineer",
       "summary": "Hey I’m Thinh, a creative front end engineer based in Ho Chi Minh, Vietnam. I'm passionate about creating incredible user experiences with web technology. I specialize in programming with Vue, React, Nuxt, Next",
       "contact": [
         {
@@ -20,6 +20,12 @@
         }
       ],
       "experience": [
+        {
+          "position": "Front-End Engineer",
+          "company": "Allied Tech Camp",
+          "time": "Jan 2025 - Now",
+          "description": ""
+        },
         {
           "position": "Front-End Developer",
           "company": "Yoong Solutions",

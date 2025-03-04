@@ -53,7 +53,7 @@ onMounted(() => {
 });
 
 const heading = "LE DUONG HUNG THINH"
-const title = "<FRONT END DEVELOPER />"
+const title = "<FRONT END ENGINEER />"
 const headingChars = heading.split('');
 
 </script>

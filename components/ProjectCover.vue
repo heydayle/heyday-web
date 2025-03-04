@@ -17,10 +17,10 @@
         </div>
       </div>
       <div class="col-auto justify-content-end d-none d-xl-flex">
-        <CodeLine v-if="props.isFocused" :number="'//'">
+        <CodeLine v-if="props.isFocused" :number="'>_'">
           <span
-              class="code--white"
               v-for="(stackItem, stackIndex) in currentPortfolioItem['stack']"
+              :class="`code--${stackItem.color}`"
           >
             {{ stackItem.name }}
             <span class="px-1" v-if="stackIndex < currentPortfolioItem['stack'].length - 1"> | </span>
@@ -33,13 +33,12 @@
     <NuxtLink :to="'/portfolio/' + currentPortfolioItem['slug']">
       <div class="project-cover__video-container">
         <i class="fa-sharp fa-regular fa-arrow-up-right fa-3x open-arrow"></i>
-        <video
+        <img
             ref="video"
             :style="elementStyle"
             class="project-cover__video mouse-md"
-            :poster="currentPortfolioItem['cover']"
+            :src="currentPortfolioItem['cover']"
         >
-        </video>
       </div>
     </NuxtLink>
 
@@ -100,11 +99,11 @@ const elementClasses = computed(() => {
 
 const video = ref(null);
 watch(() => props.isFocused, (isFocused) => {
-  if (isFocused) {
-    video.value.play();
-  } else {
-    video.value.pause();
-  }
+  // if (isFocused) {
+  //   video.value.play();
+  // } else {
+  //   video.value.pause();
+  // }
 });
 
 </script>
