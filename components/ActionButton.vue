@@ -25,7 +25,7 @@ const props = defineProps({
   background-color: #7A4FEE;
   border: none;
   color: white;
-  padding: 15px 45px;
+  padding: 15px 25px;
   text-align: center;
   text-decoration: none;
   display: block;

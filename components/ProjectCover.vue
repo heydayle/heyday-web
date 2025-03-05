@@ -1,58 +1,33 @@
 <template>
-  <article
-      role="article"
-      :class="elementClasses"
-      tabindex="0"
-      :aria-label="currentPortfolioItem['title']"
-      :aria-description="currentPortfolioItem['lead']"
-  >
-
-    <!-- Title & Stack -->
-    <div class="title-bar row justify-content-between align-items-end mb-3 flex-nowrap">
-      <div class="col-auto">
-        <h2 class="lead pb-1 pe-3 d-inline-block mb-0 ps-4 ps-0" style="color: #F2F2F2">{{ displayIndex }}.</h2>
-        <div class="d-inline-block">
-          <span class="project-cover__type text-small mb-0 d-block">{{ currentPortfolioItem["type"] }}</span>
-          <h2 class="project-cover__title mb-0">{{ currentPortfolioItem["name"] }}</h2>
-        </div>
-      </div>
-      <div class="col-auto justify-content-end d-none d-xl-flex">
-        <CodeLine v-if="props.isFocused" :number="'>_'">
-          <span
-              v-for="(stackItem, stackIndex) in currentPortfolioItem['stack']"
-              :class="`code--${stackItem.color}`"
-          >
-            {{ stackItem.name }}
-            <span class="px-1" v-if="stackIndex < currentPortfolioItem['stack'].length - 1"> | </span>
-          </span>
-        </CodeLine>
-      </div>
-    </div>
-
+  <article role="article" :class="containerClasses" tabindex="0" :aria-label="currentPortfolioItem['name']"
+    :aria-description="currentPortfolioItem['lead']">
     <!-- Video -->
-    <NuxtLink :to="'/portfolio/' + currentPortfolioItem['slug']">
+    <NuxtLink :to="'/portfolio/' + currentPortfolioItem['slug']" @click="isActive = false">
       <div class="project-cover__video-container">
-        <i class="fa-sharp fa-regular fa-arrow-up-right fa-3x open-arrow"></i>
-        <img
-            ref="video"
-            :style="elementStyle"
-            class="project-cover__video mouse-md"
-            :src="currentPortfolioItem['cover']"
-        >
+        <video ref="video" :style="mediaStyle" class="project-cover__video mouse-md" loop="true" muted :autoplay="true"
+          playsinline :poster="currentPortfolioItem['cover']">
+          <source :src="currentPortfolioItem['videoWebm']" type="video/webm">
+          <source :src="currentPortfolioItem['videoMP4']" type="video/mp4">
+        </video>
       </div>
     </NuxtLink>
 
-    <!-- Lead Text (Mobile)  -->
-    <h3 class="project-cover__lead d-block d-lg-none mt-4">
-      {{ currentPortfolioItem['lead'] }}
-    </h3>
+    <!-- Title & Stack -->
+    <div class="title-bar row">
+      <div class="col-auto">
+        <div class="d-block">
+          <h3 class="project-cover__title mb-0">{{ currentPortfolioItem["name"] }}</h3>
+          <span class="project-cover__type text-small mb-0 d-block">{{ currentPortfolioItem["client"] }}</span>
+        </div>
+      </div>
+    </div>
 
   </article>
 </template>
 
 <script setup>
 
-import {useMouse, useWindowSize} from "@vueuse/core";
+import { useMouse, useWindowSize } from "@vueuse/core";
 
 const props = defineProps({
   portfolioItem: {
@@ -77,93 +52,97 @@ const displayIndex = computed(() => {
 });
 
 const container = ref(null);
-const {width, height} = useWindowSize();
-const {x, y} = useMouse();
+const { width, height } = useWindowSize();
+const { x, y } = useMouse();
 const parallaxOffset = 30;
+const isActive = ref(false);
 
 /**
- * Determine the inline styles to apply to the element
+ * Determine the inline styles to apply to the video/image element
  */
-const elementStyle = computed(() => {
+const mediaStyle = computed(() => {
   return {
-    'transform': `translate(${(((1 / width.value) * x.value) * parallaxOffset * -1)}px, ${(((1 / height.value) * y.value) * parallaxOffset * -1)}px)`,
+    'transform': `translate(${(((1 / width.value) * x.value) * parallaxOffset * -1)}px, ${(((1 / height.value) * y.value) * parallaxOffset * -1)}px)`
   }
 });
 
-const elementClasses = computed(() => {
+const containerClasses = computed(() => {
   return {
     'project-cover': true,
-    'project-cover--focused': props.isFocused
+    'project-cover--active': isActive.value,
   }
 });
 
 const video = ref(null);
 watch(() => props.isFocused, (isFocused) => {
-  // if (isFocused) {
-  //   video.value.play();
-  // } else {
-  //   video.value.pause();
-  // }
+  if (isFocused) {
+    video.value.play();
+  } else {
+    video.value.pause();
+  }
+});
+
+onMounted(() => {
+  isActive.value = true;
 });
 
 </script>
 
 <style lang="scss" scoped>
-
 .project-cover {
   position: relative;
-  width: 1040px;
-  aspect-ratio: 2;
+  height: 600px;
   flex: none;
-  transform: scale(0.6);
-  transform-origin: bottom center;
-  transition: scale 0.6s cubic-bezier(0.6, 0, 0.2, 1);
+  background: #111115;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0 5px 10px;
+  transform: scale(0) rotateZ(10deg);
+  transform-origin: center center;
+  transition: transform 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+  aspect-ratio: 1.6;
 
-  @media screen and (max-width: 1680px) {
-    width: 960px;
-  }
-
-  @media screen and (max-width: 1400px) {
-    width: 800px;
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 80%);
+    z-index: 5;
+    border-radius: 0 0 8px 8px;
+    pointer-events: none;
   }
 
   @media screen and (max-width: 1200px) {
-    width: 700px;
-  }
-
-  @media screen and (max-width: 992px) {
-    width: calc(100vw - 60px);
-    transform: scale(0.8);
+    height: 60svh;
+    aspect-ratio: 0.8;
   }
 }
 
+.title-bar {
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  pointer-events: none;
+  z-index: 6;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.project-cover__title,
 .project-cover__type {
-  color: #AFBFD6;
-  opacity: 0;
-  transition: opacity 0.6s ease;
-}
-
-.tech-stack {
-  opacity: 0;
-  transition: opacity 0.6s ease;
-}
-
-.project-cover__title {
   color: #F2F2F2;
 }
 
 .project-cover__video-container {
   width: 100%;
-  height: calc(100vh - 380px);
-  box-shadow: rgba(0, 0, 0, 0.3) 0 40px 10px -20px;
-  border-radius: 5px;
+  height: 100%;
+  border-radius: 8px;
   cursor: pointer;
   overflow: hidden;
   position: relative;
-
-  @media screen and (max-width: 992px) {
-    height: calc(100vh - 440px);
-  }
 }
 
 .project-cover__video {
@@ -172,53 +151,35 @@ watch(() => props.isFocused, (isFocused) => {
   object-fit: cover;
   object-position: center center;
   transform-origin: center center;
+  background-color: #25223d;
 }
 
-.project-cover--focused {
-  transition: transform 0.4s cubic-bezier(0.6, 0, 0.2, 1);
+.project-cover--active {
   transform: scale(1);
 
-  .project-cover__type, .project-cover__lead {
+  .title-bar {
     opacity: 1;
-    transition-delay: 0.2s;
+    transition-delay: 1.2s;
   }
+}
 
-  .tech-stack {
-    opacity: 1;
-  }
+.project-cover__featured-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 8px;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 
   &:hover {
-
-    .open-arrow {
-      opacity: 1;
-    }
-  }
-}
-
-.project-cover__lead {
-  color: #F2F2F2;
-  font-size: 1.0rem;
-  max-width: 500px;
-  opacity: 0;
-  transition: opacity 1s ease;
-  font-weight: 500;
-  font-family: "Inter", sans-serif;
-}
-
-.open-arrow {
-  color: #F2F2F2;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  opacity: 0;
-  z-index: 2;
-  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
-  transition: opacity 0.1s ease;
-  pointer-events: none;
-
-  @media screen and (max-width: 992px) {
     opacity: 1;
   }
 }
-
 </style>

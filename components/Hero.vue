@@ -45,18 +45,18 @@
     </CodeLine>
 
     <!-- Yellow to Orange Gradient Bar -->
-    <div class="orange-bar" v-if="route.path === '/about' || route.path === '/contact'"/>
+    <div class="orange-bar" v-if="route.path === '/about' || route.path === '/contact'" />
 
     <!-- JS Icon -->
     <Transition name="icon-pop">
       <img src="~/assets/images/hero-js-icon.svg" alt="JavaScript Icon" class="js-icon"
-           v-if="route.path === '/about' || route.path === '/contact'">
+        v-if="route.path === '/about' || route.path === '/contact'">
     </Transition>
 
     <!-- Vue Icon -->
     <Transition name="icon-pop">
       <img src="~/assets/images/hero-vue-icon.svg" alt="Vue 3 Icon" class="vue-icon"
-           v-if="route.path === '/about' || route.path === '/contact'">
+        v-if="route.path === '/about' || route.path === '/contact'">
     </Transition>
 
     <!-- WebGL Container -->
@@ -70,7 +70,7 @@
       </div>
 
       <!-- WebGL Canvas -->
-      <canvas id="hero-canvas" :class="heroClasses" ref="canvas" :width="width" :height="height"/>
+      <canvas id="hero-canvas" :class="heroClasses" ref="canvas" :width="width" :height="height" />
 
     </div>
 
@@ -80,13 +80,13 @@
 <script setup>
 
 // Imports
-import {useFps, useMouse, useWindowSize} from "@vueuse/core";
-import {createShader, createProgram} from "~/shaders/shaderHelpers";
+import { useFps, useMouse, useWindowSize } from "@vueuse/core";
+import { createShader, createProgram } from "~/shaders/shaderHelpers";
 import fragment from "~/shaders/hero/fragment.js";
 import vertex from "~/shaders/hero/vertex.js";
-import {gsap} from "gsap";
-import {useWindowFocus} from '@vueuse/core'
-import {useElementVisibility} from '@vueuse/core'
+import { gsap } from "gsap";
+import { useWindowFocus } from '@vueuse/core'
+import { useElementVisibility } from '@vueuse/core'
 
 // Non-reactive WebGL variables
 let gl = null;
@@ -104,8 +104,8 @@ let time = 0;
 let then = Date.now();
 
 // Reactive WebGL variables
-const {width, height} = useWindowSize();
-const {x, y} = useMouse();
+const { width, height } = useWindowSize();
+const { x, y } = useMouse();
 let outputX = ref(x.value);
 let outputY = ref(y.value);
 let initialXOffset = ref(1);
@@ -174,70 +174,70 @@ const initWebGLComponent = () => {
 /**
  * Updates the WebGL component on every "frame" of the animation.
  */
-const renderWebGLComponent = () => {
+ const renderWebGLComponent = () => {
 
-  if (enableRendering.value === false && time !== 0) {
-    requestAnimationFrame(renderWebGLComponent);
-    return;
-  }
+if (enableRendering.value === false && time !== 0) {
+  requestAnimationFrame(renderWebGLComponent);
+  return;
+}
 
-  // Check the frame rate
-  let now = Date.now();
-  let delta = now - then;
+// Check the frame rate
+let now = Date.now();
+let delta = now - then;
 
-  // Only render if at least 16.67ms (60fps max) has passed
-  if (delta > (1000 / 60)) {
+// Only render if at least 16.67ms (60fps max) has passed
+if (delta > (1000 / 60)) {
 
-    // Set the view port
-    gl.viewport(0, 0, width.value, height.value);
+  // Set the view port
+  gl.viewport(0, 0, width.value, height.value);
 
-    // Clear the canvas
+  // Clear the canvas
     gl.clearColor(0, 0, 0, 0);
-    gl.clear(gl.COLOR_BUFFER_BIT);
+  gl.clear(gl.COLOR_BUFFER_BIT);
 
-    // Enable the depth test
-    gl.enable(gl.DEPTH_TEST);
+  // Enable the depth test
+  gl.enable(gl.DEPTH_TEST);
 
-    // Use the program
-    gl.useProgram(program);
+  // Use the program
+  gl.useProgram(program);
 
-    // Handle the position buffer update
-    gl.enableVertexAttribArray(locations.position);
-    gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
-    gl.vertexAttribPointer(locations.position, 2, gl.FLOAT, false, 0, 0);
+  // Handle the position buffer update
+  gl.enableVertexAttribArray(locations.position);
+  gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+  gl.vertexAttribPointer(locations.position, 2, gl.FLOAT, false, 0, 0);
 
     // Pass the time uniform
-    time++;
-    gl.uniform1f(locations.time, time * 0.01);
+  time++;
+  gl.uniform1f(locations.time, time * 0.01);
 
-    // Pass the resolution uniform
-    gl.uniform2f(locations.resolution, width.value, height.value);
+  // Pass the resolution uniform
+  gl.uniform2f(locations.resolution, width.value, height.value);
 
     // Pass the mouse uniform
-    outputX.value += (x.value - outputX.value) * 0.1;
-    outputY.value += (y.value - outputY.value) * 0.1;
-    gl.uniform2f(locations.mouse, (1 / width.value) * outputX.value, (1 / height.value) * outputY.value);
+  outputX.value += (x.value - outputX.value) * 0.1;
+  outputY.value += (y.value - outputY.value) * 0.1;
+  gl.uniform2f(locations.mouse, (1 / width.value) * outputX.value, (1 / height.value) * outputY.value);
 
     // Pass the zoom offset uniform
-    gl.uniform1f(locations.zoomOffset, zoomOffset.value);
+  gl.uniform1f(locations.zoomOffset, zoomOffset.value);
 
     // Pass the initial X offset uniform
-    gl.uniform1f(locations.initialXOffset, initialXOffset.value);
+  gl.uniform1f(locations.initialXOffset, initialXOffset.value);
 
     // Pass the portfolio scroll percentage uniform
-    gl.uniform1f(locations.portfolioScrollPercentage, portfolioScrollPercentage.value);
+  gl.uniform1f(locations.portfolioScrollPercentage, portfolioScrollPercentage.value);
 
-    // Draw the vertices
-    gl.drawArrays(gl.TRIANGLES, 0, 6);
+  // Draw the vertices
+  gl.drawArrays(gl.TRIANGLES, 0, 6);
 
-  }
+}
 
-  // Update delta for last frame rate check
-  then = Date.now() - (then % (1000 / 60))
+// Update delta for last frame rate check
+then = Date.now() - (then % (1000 / 60))
 
 
-  // All done
-  requestAnimationFrame(renderWebGLComponent);
+// All done
+requestAnimationFrame(renderWebGLComponent);
 }
 
 /**
@@ -290,7 +290,6 @@ const heroClasses = computed(() => {
 </script>
 
 <style lang="scss" scoped>
-
 body.fixed-webgl {
   #hero-element {
     position: fixed;
@@ -360,7 +359,7 @@ body.fixed-webgl {
       box-shadow: none;
     }
 
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 768px) {
       transform: scale(0.9);
     }
 
@@ -379,7 +378,7 @@ body.fixed-webgl {
       box-shadow: none;
     }
 
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 768px) {
       transform: scale(0.9);
     }
 
@@ -413,7 +412,8 @@ body.fixed-webgl {
   transform: translateX(-100%);
   padding: 20px;
 
-  &.hero--about, &.hero--contact {
+  &.hero--about,
+  &.hero--contact {
     transition: transform 1s cubic-bezier(0.65, 0, 0.15, 1);
     transform: translateX(0);
 
@@ -494,6 +494,7 @@ body.fixed-webgl {
   0% {
     transform: scaleX(0) translateZ(0);
   }
+
   100% {
     transform: scaleX(1) translateZ(0);
   }
@@ -528,9 +529,9 @@ body.fixed-webgl {
   transition: all 1s cubic-bezier(0.7, 0, 0, 1);
 }
 
-.icon-pop-enter-from, .icon-pop-leave-to {
+.icon-pop-enter-from,
+.icon-pop-leave-to {
   opacity: 0;
   transform: scale(0.3);
 }
-
 </style>

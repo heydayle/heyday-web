@@ -16,7 +16,9 @@
         <div class="col-12 col-lg-4">
           <CodeTag class="mb-2 mb-lg-3">{{ currentPortfolio[0]['role'] }}</CodeTag>
           <h1 class="mb-3 mb-lg-10 project__name"> {{ currentPortfolio[0]['name'] }} </h1>
-          <NuxtLink class="back-link mouse-md mb-5 mb-lg-0" to="/portfolio"><i class="fa-sharp fa-solid fa-arrow-up-left fa-2x pe-3"></i>Back to Explore Projects</NuxtLink>
+          <NuxtLink class="back-link mouse-md mb-5 mb-lg-0 sticky top-4" to="/portfolio">
+            <Icon name="material-symbols:arrow-back" size="24" class="text-white mr-2"/> Back to Explore Projects
+          </NuxtLink>
         </div>
         <div class="col">
           <video class="mouse-md" loop="true" muted autoplay playsinline :poster="currentPortfolio[0]['cover']" data-aos="zoom-in-down">
@@ -84,7 +86,7 @@ const currentPortfolioItem = portfolioData.getProjectBySlug(route.params.slug[0]
 const currentPortfolio = portfolioData.getAllProjects(route.params.slug[0])
 
 useHead({
-  title: 'Case Study: ' + currentPortfolio[0]['name'] + ', ' + currentPortfolio[0]['role'] + ' | ' + 'Thinh Le',
+  title: currentPortfolio[0]['name'] + ', ' + currentPortfolio[0]['role'] + ' | ' + 'Thinh Le',
   meta: [
     { hid: 'description', name: 'description', content:  currentPortfolioItem['lead'] },
     { hid: 'og:title', property: 'og:title', content: currentPortfolioItem['title'] },

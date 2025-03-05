@@ -40,7 +40,7 @@ export default `
           
           vec4 c= vec4(0.);
           float t = 0.;
-          for (int i = 0;i < 140; i++)
+          for (int i = 0;i < 50; i++)
           {
               if (blob(o + d * t) < 20.)
               {

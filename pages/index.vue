@@ -20,8 +20,10 @@
                   v-for="(char, index) in title">{{ char }}
             </span>
           </h2>
-          <ActionButton to="/portfolio" data-aos="fade-right" class="d-block d-lg-none mt-4 mb-4">
-            Explore <i class="fa-sharp fa-solid fa-arrow-right-long fa-lg ps-2"></i>
+          <ActionButton to="/portfolio" data-aos="fade-right" class="d-block d-lg-none mt-4 mb-4 items-center">
+            <div class="flex items-center space-x-2">
+              <span>Explore</span> <Icon name="material-symbols:arrow-outward" size="24" />
+            </div>
           </ActionButton>
           <NuxtLink class="back-link mouse-md d-inline-block d-lg-none me-5" to="/about">About<i
               class="fa-sharp fa-solid fa-arrow-up-right fa-lg ps-2"></i></NuxtLink>
