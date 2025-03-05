@@ -84,7 +84,7 @@ useHead({
     {
       hid: 'og:image',
       name: 'og:image',
-      content: 'https://github.com/heydayle'
+      content: '/cover.png'
     },
     {
       hid: 'og:image:alt',
