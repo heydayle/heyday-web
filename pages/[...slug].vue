@@ -4,7 +4,7 @@
     <div class="container">
       <div class="row mt-8">
         <div class="col-auto">
-          <MWIcon type="white" />
+          <MWIcon type="white" size="120" />
           <CodeLine :number="'404'" class="mt-5 mt-lg-7 mb-5">
             <span class="code--purple">error:</span>
             <span class="code--yellow">&nbsp;page</span>
@@ -16,7 +16,7 @@
             Looks you've navigated to a broken link.<br><em>Try not doing that again in the future.</em>
           </p>
           <ActionButton to="/" data-aos="fade-up">
-            <i class="fa-sharp fa-solid fa-arrow-up-left"></i>
+            <Icon name="material-symbols:arrow-back" size="24" class="text-white mr-2" />
             Back
           </ActionButton>
         </div>

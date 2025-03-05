@@ -1,6 +1,6 @@
 <template>
   <NuxtLink to="/">
-    <img class="main-logo mouse-md" :src="'/icon-' + type + '.svg'" :width="size" :height="size"
+    <img class="main-logo mouse-md" :src="'/icons/' + type + '.png'" :width="size" :height="size"
          alt="A small icon with a circle that merges into a square and the text MW">
   </NuxtLink>
 </template>
@@ -10,7 +10,7 @@
 defineProps({
   size: {
     type: Number,
-    default: 64
+    default: 80
   },
   type: {
     type: String,

@@ -149,7 +149,7 @@ onUnmounted(() => {
     <template v-if="portfolioData">
     <div>
       <NuxtLink class="back-link mouse-md mb-5 mb-lg-0 absolute z-10 top-6 left-6" to="/">
-          <Icon name="material-symbols:arrow-back" size="24" class="text-white mr-2"/> Home
+          <Icon name="material-symbols:arrow-insert" size="24" class="text-white mr-2"/> Home
       </NuxtLink>
     </div>
       <section id="explore-slider">

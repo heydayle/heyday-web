@@ -20,6 +20,8 @@
 <script setup>
 import { useHead } from "nuxt/app";
 
+const meta = useMetadata()
+
 useHead({
   title: 'Thinh Le | Creative Front End Engineer',
   viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
@@ -35,6 +37,11 @@ useHead({
       content: 'Hey Thinh Le, a creative front end engineer based in Ho Chi Minh, Vietnam. I\'m passionate about creating incredible user experiences with web technology. I specialize in programming with Vue, Nuxt and React. I love writing code but I\'m also experienced in UX consulting, with a keen eye for detail and an understanding of interaction design and best practices. I’ve worked on many projects where I start early in the discovery process, guide and design the UX from the ground up, and then get to work building it.'
     },
     {
+      hid: 'keywords',
+      name: 'keywords',
+      content: meta.value[0]["keywords"]?.join(',')
+    },
+    {
       hid: 'theme-color',
       name: 'theme-color',
       content: '#7a4fee'
@@ -48,6 +55,16 @@ useHead({
       hid: 'googlebot',
       name: 'googlebot',
       content: 'index, follow'
+    },
+    {
+      hid: 'author',
+      name: 'author',
+      content: 'Thinh Le | Heyday Le | Devaloka'
+    },
+    {
+      hid: 'publisher',
+      name: 'publisher',
+      content: 'Thinh Le | Heyday Le | Devaloka'
     },
     {
       hid: 'og:url',

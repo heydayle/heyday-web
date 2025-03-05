@@ -58,6 +58,17 @@ const heading = "LE DUONG HUNG THINH"
 const title = "<FRONT END ENGINEER />"
 const headingChars = heading.split('');
 
+const meta = useMetadata()
+
+useMetadata({
+  meta: [
+    {
+      name: 'keywords',
+      content: meta[0]?.keywords
+    }
+  ],
+})
+
 </script>
 
 <style lang="scss" scoped>

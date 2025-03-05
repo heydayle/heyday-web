@@ -28,7 +28,8 @@ const props = defineProps({
   padding: 15px 25px;
   text-align: center;
   text-decoration: none;
-  display: block;
+  display: flex;
+  align-items: center;
   font-size: 1rem;
   cursor: pointer;
   width: fit-content;

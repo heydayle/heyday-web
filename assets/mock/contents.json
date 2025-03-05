@@ -600,5 +600,40 @@
           ]
         }
       }
+    ],
+    "nuxt-boilerplate-v3": [
+      {
+        "id": 9,
+        "created_at": "2024-06-13T07:28:46.87894+00:00",
+        "project_id": 123213,
+        "slug": "nuxt-boilerplate-v3",
+        "content_type": "paragraph",
+        "text": null,
+        "annotations": null,
+        "href": null,
+        "color": null,
+        "array_text": [
+          {
+            "href": null,
+            "text": {
+              "link": null,
+              "content": "Kickstart Your Nuxt Project – Preconfigured, Optimized, Ready to Code! \n\nReady-to-use framework for Nuxt projects, pre-configured framework with essential libraries and tools, streamlining development and ensuring a clean, structured codebase. 🚀"
+            },
+            "type": "text",
+            "plain_text": "Kickstart Your Nuxt Project – Preconfigured, Optimized, Ready to Code! \n\nReady-to-use framework for Nuxt projects, pre-configured framework with essential libraries and tools, streamlining development and ensuring a clean, structured codebase. 🚀",
+            "annotations": {
+              "bold": false,
+              "code": false,
+              "color": "default",
+              "italic": false,
+              "underline": false,
+              "strikethrough": false
+            }
+          }
+        ],
+        "order": 9,
+        "block_type": "paragraph",
+        "image": null
+      }
     ]
 }

@@ -5,8 +5,9 @@
       <div class="row mt-0 mt-lg-6">
         <main class="d-flex flex-column" itemscope itemtype="https://schema.org/Person">
           <div class="col-12 col-md-8 col-lg-7 col-xl-6 col-xxl-5 mb-4">
-            <NuxtLink class="back-link mouse-md mt-4 mt-lg-0 mb-5 mb-lg-0 d-block text-end text-md-start" to="/">Back<i
-                class="fa-sharp fa-solid fa-arrow-up-right fa-2x ps-3"></i></NuxtLink>
+            <NuxtLink class="back-link mouse-md mt-4 mt-lg-0 mb-5 mb-lg-0 d-block text-end text-md-start" to="/">Back
+              <Icon name="material-symbols:arrow-outward" size="24" class="text-black ml-2" />
+            </NuxtLink>
             <CodeTag class="mt-5 mb-5 d-none d-lg-block">about</CodeTag>
             <div class="d-flex flex-row align-items-center mb-5">
               <img src="https://avatars.githubusercontent.com/u/54289320?s=400&u=e2ede7ab28f82c5933c7ec6b5f644a9d55c62f98&v=4" alt="Hey I'm Simon" class="headshot me-4 me-lg-5">
@@ -65,8 +66,8 @@
               can. You can schedule a discovery call to see if we’re a good fit, or just email at <a
                 href="mailto:hungthinh.ckc@gmail.com" class="mouse-sm" itemprop="email">hungthinh.ckc@gmail.com</a> or my Github <a href="https://github.com/heydayle" target="_blank" class="mouse-sm">heydayle</a>.
             </p>
-            <ActionButton to="/contact" data-aos="fade-up" class="d-none d-lg-block">
-              <i class="fa-sharp fa-solid fa-comment"></i>
+            <ActionButton to="/contact" data-aos="fade-up" class="d-none d-lg-flex">
+              <Icon name="tabler:message-circle-filled" size="24" class="mr-2"/>
               Let's Chat
             </ActionButton>
           </div>

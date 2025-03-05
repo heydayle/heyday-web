@@ -7,7 +7,7 @@
 
       <div class="row mt-5">
         <div class="col-auto">
-          <MWIcon :size="50" />
+          <MWIcon />
         </div>
       </div>
 
@@ -17,7 +17,7 @@
           <CodeTag class="mb-2 mb-lg-3">{{ currentPortfolio[0]['role'] }}</CodeTag>
           <h1 class="mb-3 mb-lg-10 project__name"> {{ currentPortfolio[0]['name'] }} </h1>
           <NuxtLink class="back-link mouse-md mb-5 mb-lg-0 sticky top-4" to="/portfolio">
-            <Icon name="material-symbols:arrow-back" size="24" class="text-white mr-2"/> Back to Explore Projects
+            <Icon name="material-symbols:arrow-insert" size="24" class="text-white mr-2"/> Explore Projects
           </NuxtLink>
         </div>
         <div class="col">

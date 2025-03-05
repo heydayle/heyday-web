@@ -1,94 +1,112 @@
 [
-    {
-      "id": "aec65d20-bab4-4a27-9759-1048b89982ba",
-      "created_at": "2024-06-14T02:26:24.15519+00:00",
-      "fullName": "Thinh Le",
-      "title": "Front-End Engineer",
-      "summary": "Hey I’m Thinh, a creative front end engineer based in Ho Chi Minh, Vietnam. I'm passionate about creating incredible user experiences with web technology. I specialize in programming with Vue, React, Nuxt, Next",
-      "contact": [
-        {
-          "label": "Email",
-          "value": "hungthinh.ckc@gmail.com"
-        },
-        {
-          "label": "Linkedin",
-          "value": "https://www.linkedin.com/in/thinhle99/"
-        },
-        {
-          "label": "Github",
-          "value": "https://github.com/heydayle"
-        }
-      ],
-      "experience": [
-        {
-          "position": "Front-End Engineer",
-          "company": "Allied Tech Camp",
-          "time": "Jan 2025 - Now",
-          "description": ""
-        },
-        {
-          "position": "Front-End Developer",
-          "company": "Yoong Solutions",
-          "time": "Nov 2021 - Jun 2024",
-          "description": ""
-        },
-        {
-          "position": "Front-End Developer",
-          "company": "WIKI Solution",
-          "time": "Feb 2021 - Aug 2021",
-          "description": ""
-        },
-        {
-          "position": "Front-End Developer",
-          "company": "Gugotech",
-          "time": "Feb 2020 - Feb 2021",
-          "description": ""
-        }
-      ],
-      "skills": {
-        "programingLanguage": {
-          "label": "Programing Language",
-          "value": [
-            "<strong>Javascript</strong>",
-            "<strong>Typescript</strong>"
-          ]
-        },
-        "framework": {
-          "label": "Framework",
-          "value": [
-            "<strong>Nuxt 3</strong>",
-            "<strong>Vuejs (Option API/ Composition API)</strong>",
-            "<strong>Reactjs/ React native</strong>",
-            "<strong>Redux, Pinia, VueX</strong>",
-            "<strong>Element UI, Vuetify, Nuxt UI</strong>",
-            "<strong>TailwindCSS, Bootstrap</strong>",
-            "<strong>Google Search Console, Google Analytics, Google Tag Manager</strong>",
-            "<strong>Firebase</strong>"
-          ]
-        },
-        "versionControl": {
-          "label": "Version Control",
-          "value": [
-            "<strong>Git (Github/ Gitlab/ Azue devOps)</strong>",
-            "<strong>NPM, YARN, PNPM</strong>"
-          ]
-        },
-        "database": {
-          "label": "Database",
-          "value": [
-            "<strong>MongoDB</strong>",
-            "<strong>My SQL</strong>"
-          ]
-        },
-        "other": {
-          "label": "Other",
-          "value": [
-            "<strong>Figma</strong>",
-            "<strong>Jira</strong>",
-            "<strong>Azue devOps</strong>",
-            "<strong>SEO</strong>"
-          ]
-        }
+  {
+    "id": "aec65d20-bab4-4a27-9759-1048b89982ba",
+    "created_at": "2024-06-14T02:26:24.15519+00:00",
+    "fullName": "Thinh Le",
+    "title": "Front-End Engineer",
+    "summary": "Hey I’m Thinh, a creative front end engineer based in Ho Chi Minh, Vietnam. I'm passionate about creating incredible user experiences with web technology. I specialize in programming with Vue, React, Nuxt, Next",
+    "contact": [
+      {
+        "label": "Email",
+        "value": "hungthinh.ckc@gmail.com"
+      },
+      {
+        "label": "Linkedin",
+        "value": "https://www.linkedin.com/in/thinhle99/"
+      },
+      {
+        "label": "Github",
+        "value": "https://github.com/heydayle"
       }
-    }
-  ]
+    ],
+    "experience": [
+      {
+        "position": "Front-End Engineer",
+        "company": "Allied Tech Camp",
+        "time": "Jan 2025 - Now",
+        "description": ""
+      },
+      {
+        "position": "Front-End Developer",
+        "company": "Yoong Solutions",
+        "time": "Nov 2021 - Jun 2024",
+        "description": ""
+      },
+      {
+        "position": "Front-End Developer",
+        "company": "WIKI Solution",
+        "time": "Feb 2021 - Aug 2021",
+        "description": ""
+      },
+      {
+        "position": "Front-End Developer",
+        "company": "Gugotech",
+        "time": "Feb 2020 - Feb 2021",
+        "description": ""
+      }
+    ],
+    "skills": {
+      "programingLanguage": {
+        "label": "Programing Language",
+        "value": [
+          "<strong>Javascript</strong>",
+          "<strong>Typescript</strong>"
+        ]
+      },
+      "framework": {
+        "label": "Framework",
+        "value": [
+          "<strong>Nuxt 3</strong>",
+          "<strong>Vuejs (Option API/ Composition API)</strong>",
+          "<strong>Reactjs/ React native</strong>",
+          "<strong>Redux, Pinia, VueX</strong>",
+          "<strong>Element UI, Vuetify, Nuxt UI</strong>",
+          "<strong>TailwindCSS, Bootstrap</strong>",
+          "<strong>Google Search Console, Google Analytics, Google Tag Manager</strong>",
+          "<strong>Firebase</strong>"
+        ]
+      },
+      "versionControl": {
+        "label": "Version Control",
+        "value": [
+          "<strong>Git (Github/ Gitlab/ Azue devOps)</strong>",
+          "<strong>NPM, YARN, PNPM</strong>"
+        ]
+      },
+      "database": {
+        "label": "Database",
+        "value": [
+          "<strong>MongoDB</strong>",
+          "<strong>My SQL</strong>"
+        ]
+      },
+      "other": {
+        "label": "Other",
+        "value": [
+          "<strong>Figma</strong>",
+          "<strong>Jira</strong>",
+          "<strong>Azue devOps</strong>",
+          "<strong>SEO</strong>"
+        ]
+      }
+    },
+    "keywords": [
+      "thinh",
+      "thinh le",
+      "thinhle",
+      "thinh suy",
+      "thinhsuy",
+      "le duong hung thinh",
+      "heydayle",
+      "noo phuoc thinh",
+      "thinh nguyen",
+      "thinh tran",
+      "heyday le",
+      "thinh la ai?",
+      "who is thinh",
+      "le thinh",
+      "lethinh",
+      "thinh portfolio"
+    ]
+  }
+]

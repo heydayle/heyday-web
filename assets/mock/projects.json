@@ -130,5 +130,36 @@
                 "color": "purple"
             }
         ]
+    },
+    {
+        "id": 1312387,
+        "created_at": "2024-06-13T08:21:55.225654+00:00",
+        "name": "Nuxt boilerplate v3",
+        "title": "Kickstart Your Nuxt Project – Preconfigured, Optimized, Ready to Code!",
+        "time": "Feb 2025 - Now",
+        "contents": 121312,
+        "images": null,
+        "cover": "/projects/nuxt-boilerplate-v3/cover.png",
+        "site": "nuxt-boilerplate-nine.vercel.app/",
+        "role": "Frontend Engineer",
+        "client": "Personal",
+        "slug": "nuxt-boilerplate-v3",
+        "stack": [
+            {
+                "id": "923a339b-6c21-4777-a18d-99d6525c8840",
+                "name": "Nuxt",
+                "color": "green"
+            },
+            {
+                "id": "923a339b-6c21-4777-a18d-99d6525c8840",
+                "name": "Vue",
+                "color": "green"
+            },
+            {
+                "id": "923a339b-6c21-4777-a18d-99d6525c8840",
+                "name": "Composition API",
+                "color": "purple"
+            }
+        ]
     }
 ]
