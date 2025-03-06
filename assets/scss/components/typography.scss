@@ -30,8 +30,8 @@ h1 {
     font-weight: 700;
 
     @media screen and (max-width: 992px) {
-      @include font-size(3rem);
-      @include rfs(2.4rem, line-height);
+      @include font-size(5.5rem);
+      @include rfs(5rem, line-height);
     }
 
     &.small {

@@ -22,7 +22,7 @@
           </h2>
           <ActionButton to="/portfolio" data-aos="fade-right" class="d-block d-lg-none mt-4 mb-4 items-center">
             <div class="flex items-center space-x-2">
-              <span>Explore</span> <Icon name="material-symbols:arrow-outward" size="24" />
+              <span class="text-white">Explore</span> <Icon name="material-symbols:arrow-outward" size="24" class="text-white" />
             </div>
           </ActionButton>
           <NuxtLink class="back-link mouse-md d-inline-block d-lg-none me-5" to="/about">About<i
