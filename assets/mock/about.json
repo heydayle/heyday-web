@@ -47,23 +47,43 @@
     ],
     "skills": {
       "programingLanguage": {
-        "label": "Programing Language",
+        "label": "Programing Languages",
         "value": [
           "<strong>Javascript</strong>",
           "<strong>Typescript</strong>"
         ]
       },
       "framework": {
-        "label": "Framework",
+        "label": "Frameworks",
         "value": [
-          "<strong>Nuxt 3</strong>",
-          "<strong>Vuejs (Option API/ Composition API)</strong>",
-          "<strong>Reactjs/ React native</strong>",
-          "<strong>Redux, Pinia, VueX</strong>",
-          "<strong>Element UI, Vuetify, Nuxt UI</strong>",
-          "<strong>TailwindCSS, Bootstrap</strong>",
-          "<strong>Google Search Console, Google Analytics, Google Tag Manager</strong>",
-          "<strong>Firebase</strong>"
+          "<strong>Nuxt, Next, Astro</strong>",
+          "<strong>Vue (Option API/ Composition API)</strong>",
+          "<strong>React/ React Native</strong>"
+        ]
+      },
+      "stateManagement": {
+        "label": "State Management",
+        "value": [
+          "<strong>Redux</strong>",
+          "<strong>Pinia</strong>",
+          "<strong>VueX</strong>"
+        ]
+      },
+      "uiFramework": {
+        "label": "UI Frameworks",
+        "value": [
+          "<strong>Element UI</strong>",
+          "<strong>Vuetify</strong>",
+          "<strong>Nuxt UI</strong>",
+          "<strong>Shadcn UI</strong>"
+        ]
+      },
+      "stylingFramework": {
+        "label": "Styling Frameworks",
+        "value": [
+          "<strong>SASS/ SCSS</strong>",
+          "<strong>TailwindCSS</strong>",
+          "<strong>Bootstrap</strong>"
         ]
       },
       "versionControl": {
@@ -86,7 +106,9 @@
           "<strong>Figma</strong>",
           "<strong>Jira</strong>",
           "<strong>Azue devOps</strong>",
-          "<strong>SEO</strong>"
+          "<strong>SEO</strong>",
+          "<strong>Google Search Console, Google Analytics, Google Tag Manager</strong>",
+          "<strong>Firebase</strong>"
         ]
       }
     },

@@ -44,7 +44,7 @@
 <!--            </div>-->
 <!--          </div>-->
           <div class="col-12 col-md-8 col-lg-7 col-xl-6 col-xxl-5 mb-4 mb-lg-8">
-            <div class="flex w-full justify-between">
+            <div class="flex flex-col w-full justify-between">
               <div class="flex-1">
                 <h3 class="mt-5 mb-4">
                   Technical skills
@@ -53,7 +53,7 @@
               </div>
               <div class="flex-1">
                 <h3 class="mt-5 mb-4">
-                  Experience
+                  Experiences
                 </h3>
                 <Experience :experiences="dataAbout[0]['experience']"/>
               </div>

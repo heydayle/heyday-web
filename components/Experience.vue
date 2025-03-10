@@ -11,12 +11,12 @@ defineProps<IProps>()
 </script>
 
 <template>
-  <div>
-    <div v-for="(experience, index) in experiences" :key="index">
-      <p class="p-2 font-monospace">
+  <div class="grid grid-cols-2 md:grid-cols-4">
+    <div v-for="(experience, index) in experiences" :key="index" class="group">
+      <p class="p-2 font-monospace text-xs">
         {{ experience?.time }}
       </p>
-      <div class="ms-2 ps-4 pb-4 border-start">
+      <div class="ms-2 ps-4 pb-4 border-start group-hover:shadow-lg">
         <strong>{{ experience?.position }}</strong>
         <p>{{ experience?.company }}</p>
         <p>{{ experience?.description }}</p>

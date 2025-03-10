@@ -6,7 +6,7 @@
     <div id="bottom-bar" class="container-xxxl">
       <div class="row mb-3 mb-lg-5 mb-xxl-6 justify-content-between align-items-end">
         <div class="col-11 col-sm-8 col-xxl-6 col-xxxl-7">
-          <i class="fa-sharp fa-solid fa-code-commit lead-icon mb-4 mb-lg-5" aria-hidden="true"></i>
+          <Icon name="ri:code-s-slash-fill" size="50" class="text-white mb-2 mb-lg-3" aria-hidden="true"/>
           <h1 class="visually-hidden">{{ heading }}</h1>
           <h1 class="lead mouse-lg" v-once>
             <span class="heading-char" aria-hidden="true"
