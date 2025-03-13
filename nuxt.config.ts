@@ -22,5 +22,12 @@ export default defineNuxtConfig({
       }
   },
 
-  compatibilityDate: '2025-03-05'
+  compatibilityDate: '2025-03-05',
+  runtimeConfig: {
+    public: {
+        NOTION_DB_ABOUT_ID: process.env.NOTION_DB_ABOUT_ID,
+        NOTION_DB_CONTENTS_ID: process.env.NOTION_DB_CONTENTS_ID,
+        NOTION_DB_PROJECTS_ID: process.env.NOTION_DB_PROJECTS_ID
+    }
+  }
 });
