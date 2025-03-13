@@ -32,7 +32,7 @@ function convertNotionDatabase(notionData: any) {
       timeframe: extractText(properties.time?.rich_text) || '',
       slug: extractText(properties.slug?.rich_text) || '',
       website: extractText(properties.site?.rich_text) || '',
-      coverImage: extractText(properties.cover?.rich_text) || '',
+      cover: extractText(properties.cover?.rich_text) || '',
       technologies: extractMultiSelect(properties.tech?.multi_select) || [],
       stack: extractMultiSelect(properties.stack?.multi_select) || [],
       created: notionData.created_time,
