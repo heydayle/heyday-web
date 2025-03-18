@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/tailwindcss', '@nuxt/icon'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/icon', '@zadigetvoltaire/nuxt-gtm'],
 
   app: {
       pageTransition: {name: 'page', mode: 'out-in'},
@@ -21,7 +21,9 @@ export default defineNuxtConfig({
           }
       }
   },
-
+  gtm: {
+    id: 'GTM-P74J46DB',
+  },
   compatibilityDate: '2025-03-05',
   runtimeConfig: {
     public: {
