@@ -23,7 +23,7 @@ import { useHead } from "nuxt/app";
 const meta = useMetadata()
 
 useHead({
-  title: 'Thinh Le | Creative Front End Engineer',
+  title: 'Thinh Le',
   viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
   lang: 'en-US',
   charset: 'utf-8',
@@ -34,7 +34,7 @@ useHead({
     {
       hid: 'description',
       name: 'description',
-      content: 'Hey Thinh Le, a creative front end engineer based in Ho Chi Minh, Vietnam. I\'m passionate about creating incredible user experiences with web technology. I specialize in programming with Vue, Nuxt and React. I love writing code but I\'m also experienced in UX consulting, with a keen eye for detail and an understanding of interaction design and best practices. I’ve worked on many projects where I start early in the discovery process, guide and design the UX from the ground up, and then get to work building it.'
+      content: 'Hey Thinh Le, a front end engineer based in Ho Chi Minh, Vietnam. I\'m passionate about creating incredible user experiences with web technology. I specialize in programming with Vue, Nuxt and React. I love writing code but I\'m also experienced in UX consulting, with a keen eye for detail and an understanding of interaction design and best practices. I’ve worked on many projects where I start early in the discovery process, guide and design the UX from the ground up, and then get to work building it.'
     },
     {
       hid: 'keywords',
@@ -74,7 +74,7 @@ useHead({
     {
       hid: 'og:title',
       name: 'og:title',
-      content: 'Thinh Le | Creative Front End Engineer'
+      content: 'Thinh Le | Front End Engineer'
     },
     {
       hid: 'og:type',
@@ -89,17 +89,17 @@ useHead({
     {
       hid: 'og:image:alt',
       name: 'og:image:alt',
-      content: 'Thinh Le | Creative Front End Engineer'
+      content: 'Thinh Le | Front End Engineer'
     },
     {
       hid: 'og:description',
       name: 'og:description',
-      content: 'Hey Thinh Le, a creative front end engineer based in Ho Chi Minh, Vietnam. I\'m passionate about creating incredible user experiences with web technology. I specialize in programming with Vue, Nuxt and React. I love writing code but I\'m also experienced in UX consulting, with a keen eye for detail and an understanding of interaction design and best practices. I’ve worked on many projects where I start early in the discovery process, guide and design the UX from the ground up, and then get to work building it.'
+      content: 'Hey Thinh Le, a front end engineer based in Ho Chi Minh, Vietnam. I\'m passionate about creating incredible user experiences with web technology. I specialize in programming with Vue, Nuxt and React. I love writing code but I\'m also experienced in UX consulting, with a keen eye for detail and an understanding of interaction design and best practices. I’ve worked on many projects where I start early in the discovery process, guide and design the UX from the ground up, and then get to work building it.'
     },
     {
       hid: 'og:site_name',
       name: 'og:site_name',
-      content: 'Thinh Le| Creative Front End Engineer'
+      content: 'Thinh Le| Front End Engineer'
     },
     {
       hid: 'og:locale',
@@ -134,7 +134,7 @@ useHead({
     {
       hid: 'twitter:description',
       name: 'twitter:description',
-      content: 'Hey Thinh Le, a creative front end engineer based in Ho Chi Minh, Vietnam.'
+      content: 'Hey Thinh Le, a front end engineer based in Ho Chi Minh, Vietnam.'
     },
     {
       hid: 'twitter:image',
@@ -144,12 +144,11 @@ useHead({
     {
       hid: 'twitter:image:alt',
       name: 'twitter:image:alt',
-      content: 'Thinh Le | Creative Front End Engineer'
+      content: 'Thinh Le | Front End Engineer'
     }
   ],
   link: [
     {rel: 'icon', type: 'image/svg', href: '/icon-notext.svg'},
-    {rel: 'preconnect', href: 'https://api.marchantweb.com'},
     {
       rel: 'stylesheet',
       href: 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap'
