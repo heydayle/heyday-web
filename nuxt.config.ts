@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/tailwindcss', '@nuxt/icon', '@zadigetvoltaire/nuxt-gtm'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/icon', '@zadigetvoltaire/nuxt-gtm', 'nuxt-gtag'],
 
   app: {
       pageTransition: {name: 'page', mode: 'out-in'},
@@ -22,7 +22,13 @@ export default defineNuxtConfig({
       }
   },
   gtm: {
-    id: 'GTM-P74J46DB',
+    id: process.env.GTM_KEY || 'GTM-xxxxxx',
+  },
+  gtag: {
+    id: process.env.GTAG_KEY || 'G-xxxxxxxx',
+    config: {
+      page_title: 'Thinh Le Page'
+    },
   },
   compatibilityDate: '2025-03-05',
   runtimeConfig: {

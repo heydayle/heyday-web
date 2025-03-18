@@ -21,6 +21,7 @@
     "@zadigetvoltaire/nuxt-gtm": "^0.0.13",
     "aos": "^2.3.4",
     "gsap": "npm:@gsap/shockingly@3.11.4",
+    "nuxt-gtag": "^3.0.2",
     "sass": "^1.55.0",
     "sass-loader": "^13.0.2"
   }

@@ -26,6 +26,9 @@ importers:
       gsap:
         specifier: npm:@gsap/shockingly@3.11.4
         version: '@gsap/shockingly@3.11.4'
+      nuxt-gtag:
+        specifier: ^3.0.2
+        version: 3.0.2(magicast@0.3.5)
       sass:
         specifier: ^1.55.0
         version: 1.86.0
@@ -2497,6 +2500,9 @@ packages:
 
   nth-check@2.1.1:
     resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==}
+
+  nuxt-gtag@3.0.2:
+    resolution: {integrity: sha512-0Spu/rffPxW7REebkjE22qQOuVZIQuyIuvd61InDdJU+d+gRIqWhrUuKBWdk43N/J1elj+cTK2kEdk5FQX7vdQ==}
 
   nuxt@3.16.0:
     resolution: {integrity: sha512-4j2tuHo+kcComQ1WrCD+i1w3UFOHrcnNH30cwiEY/WZZlBZOlC6DtUm6aBjhfpBFaMYsF4PbyKsNW+7FHwckHA==}
@@ -6498,6 +6504,15 @@ snapshots:
   nth-check@2.1.1:
     dependencies:
       boolbase: 1.0.0
+
+  nuxt-gtag@3.0.2(magicast@0.3.5):
+    dependencies:
+      '@nuxt/kit': 3.16.0(magicast@0.3.5)
+      defu: 6.1.4
+      pathe: 1.1.2
+      ufo: 1.5.4
+    transitivePeerDependencies:
+      - magicast
 
   nuxt@3.16.0(@parcel/watcher@2.5.1)(@types/node@22.13.10)(db0@0.3.1)(ioredis@5.6.0)(magicast@0.3.5)(rollup@4.36.0)(sass@1.86.0)(terser@5.39.0)(typescript@5.8.2)(vite@6.2.2(@types/node@22.13.10)(jiti@2.4.2)(sass@1.86.0)(terser@5.39.0)(yaml@2.7.0))(yaml@2.7.0):
     dependencies:
