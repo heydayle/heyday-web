@@ -158,6 +158,9 @@ useHead({
   script: [
     {
       src: "https://kit.fontawesome.com/172ddc2486.js", async: true, defer: true
+    },
+    {
+      src: "gtm.js", async: true, defer: true
     }
   ],
 });
