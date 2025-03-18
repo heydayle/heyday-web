@@ -85,6 +85,12 @@ const portfolioData = await usePortfolio();
 const currentPortfolioItem = portfolioData.getProjectBySlug(route.params.slug[0])
 const currentPortfolio = portfolioData.getAllProjects(route.params.slug[0])
 
+const { gtag } = useGtag()
+gtag('event', 'page_view', {
+  app_name: 'Thinh Le',
+  screen_name: currentPortfolio[0]['name']
+})
+
 useHead({
   title: currentPortfolio[0]['name'] + ', ' + currentPortfolio[0]['role'] + ' | ' + 'Thinh Le',
   meta: [
