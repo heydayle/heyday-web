@@ -88,7 +88,7 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: 'Junior front end engineer with 2.5+ years building creative websites, interactive experiences and custom web software.'
+      content: 'Front End Engineer with 4+ years building creative websites, I’m passionate about building user-centric web applications and content management systems, using Javascript frameworks (Vue, React..) and Meta frameworks (Next, Nuxt, Astro)'
     }
   ],
   bodyAttrs: {
