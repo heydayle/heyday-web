@@ -84,6 +84,7 @@ const portfolioData = await usePortfolio();
 
 const currentPortfolioItem = portfolioData.getProjectBySlug(route.params.slug[0])
 const currentPortfolio = portfolioData.getAllProjects(route.params.slug[0])
+console.log(currentPortfolio);
 
 const { gtag } = useGtag()
 gtag('event', 'page_view', {

@@ -165,5 +165,37 @@
             }
         ],
         "tech": ["Nuxt", "Vue", "Composition API", "Next Auth", "Pinia", "Vueuse", "i18n", "Nuxt UI", "TailwindCSS", "SASS/ SCSS"]
+    },
+    {
+        "id": 1312387,
+        "created_at": "2024-06-13T08:21:55.225654+00:00",
+        "name": "Library of memory",
+        "title": "All the cool pictures I've taken in my life",
+        "time": "Mar 2025 - Now",
+        "contents": 121312,
+        "images": null,
+        "cover": "/projects/library-of-memory/cover.png",
+        "site": "memories.thinh.io.vn",
+        "role": "Fullstack Engineer",
+        "client": "Personal",
+        "slug": "library-of-memory",
+        "stack": [
+            {
+                "id": "923a339b-6c21-4777-a18d-99d6525c8840",
+                "name": "Nuxt",
+                "color": "green"
+            },
+            {
+                "id": "923a339b-6c21-4777-a18d-99d6525c8840",
+                "name": "Vue",
+                "color": "green"
+            },
+            {
+                "id": "923a339b-6c21-4777-a18d-99d6525c8840",
+                "name": "Composition API",
+                "color": "purple"
+            }
+        ],
+        "tech": ["Nuxt", "Vue", "Composition API", "Next Auth", "Pinia", "Vueuse", "i18n", "Nuxt UI", "TailwindCSS", "SASS/ SCSS"]
     }
 ]
