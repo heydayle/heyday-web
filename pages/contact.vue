@@ -42,6 +42,11 @@ useHead({
   }
 });
 
+const { gtag } = useGtag()
+gtag('event', 'page_view', {
+  app_name: 'Thinh Le',
+  screen_name: 'Contact'
+})
 </script>
 
 <style lang="scss" scoped>

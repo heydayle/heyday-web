@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/tailwindcss', '@nuxt/icon'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/icon', '@zadigetvoltaire/nuxt-gtm', 'nuxt-gtag'],
 
   app: {
       pageTransition: {name: 'page', mode: 'out-in'},
@@ -21,6 +21,21 @@ export default defineNuxtConfig({
           }
       }
   },
-
-  compatibilityDate: '2025-03-05'
+  gtm: {
+    id: process.env.GTM_KEY || 'GTM-xxxxxx',
+  },
+  gtag: {
+    id: process.env.GTAG_KEY || 'G-xxxxxxxx',
+    config: {
+      page_title: 'Thinh Le Page'
+    },
+  },
+  compatibilityDate: '2025-03-05',
+  runtimeConfig: {
+    public: {
+        NOTION_DB_ABOUT_ID: process.env.NOTION_DB_ABOUT_ID,
+        NOTION_DB_CONTENTS_ID: process.env.NOTION_DB_CONTENTS_ID,
+        NOTION_DB_PROJECTS_ID: process.env.NOTION_DB_PROJECTS_ID
+    }
+  }
 });

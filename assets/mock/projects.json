@@ -67,7 +67,8 @@
                 "name": "Composition API",
                 "color": "purple"
             }
-        ]
+        ],
+        "tech": ["Nuxt", "Vue", "Composition API", "VueX", "Pinia", "Vueuse", "i18n", "Element UI", "TailwindCSS", "SASS/ SCSS"]
     },
     {
         "id": 1312386,
@@ -98,7 +99,8 @@
                 "name": "Composition API",
                 "color": "purple"
             }
-        ]
+        ],
+        "tech": ["Nuxt", "Vue", "Composition API", "Pinia", "Vueuse", "i18n", "Headless UI", "TailwindCSS", "SASS/ SCSS"]
     },
     {
         "id": 1312386,
@@ -129,7 +131,8 @@
                 "name": "Composition API",
                 "color": "purple"
             }
-        ]
+        ],
+        "tech": ["Nuxt", "Vue", "Composition API", "Pinia", "Vueuse", "i18n", "TailwindCSS", "Stylus"]
     },
     {
         "id": 1312387,
@@ -160,6 +163,7 @@
                 "name": "Composition API",
                 "color": "purple"
             }
-        ]
+        ],
+        "tech": ["Nuxt", "Vue", "Composition API", "Next Auth", "Pinia", "Vueuse", "i18n", "Nuxt UI", "TailwindCSS", "SASS/ SCSS"]
     }
 ]

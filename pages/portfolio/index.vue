@@ -6,10 +6,20 @@ import {Draggable} from "gsap/Draggable";
 import {InertiaPlugin} from "gsap/InertiaPlugin";
 import {Observer} from "gsap/Observer";
 
+const { gtag } = useGtag()
+gtag('event', 'page_view', {
+  app_name: 'Thinh Le',
+  screen_name: 'Porfolio'
+})
+
 gsap.registerPlugin(ScrollTrigger, Draggable, InertiaPlugin, Observer);
 
 const portfolio = await usePortfolio(true);
-const portfolioData = portfolio.projectsData
+
+const { notionGetProject } = useNotion()
+const { convertNotionDatabaseBatch } = useConvert()
+const { data, error } = await notionGetProject()
+const portfolioData = computed(() => convertNotionDatabaseBatch(data.value.results))
 
 // TODO: Review on mobile and perhaps make the cards a little smaller - need to handle resize event.
 
