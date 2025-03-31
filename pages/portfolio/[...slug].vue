@@ -87,8 +87,7 @@ const currentPortfolio = portfolioData.getAllProjects(route.params.slug[0])
 
 const { gtag } = useGtag()
 gtag('event', 'page_view', {
-  app_name: 'Thinh Le',
-  screen_name: currentPortfolio[0]['name']
+  page_title: currentPortfolio[0]['name'],
 })
 
 useHead({
