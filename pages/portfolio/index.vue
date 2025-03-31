@@ -8,7 +8,7 @@ import {Observer} from "gsap/Observer";
 
 const { gtag } = useGtag()
 gtag('event', 'page_view', {
-  app_name: 'Thinh Le',
+  page_title: 'Thinh Le - Portfolio',
   screen_name: 'Porfolio'
 })
 
