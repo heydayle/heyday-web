@@ -98,8 +98,7 @@ useHead({
 
 const { gtag } = useGtag()
 gtag('event', 'page_view', {
-  app_name: 'Thinh Le',
-  screen_name: 'About'
+  page_title: 'Thinh Le - About',
 })
 
 const portfolioData = await usePortfolio();
