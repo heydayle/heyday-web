@@ -12,8 +12,6 @@ gtag('event', 'page_view', {
   screen_name: 'Porfolio'
 })
 
-gsap.registerPlugin(ScrollTrigger, Draggable, InertiaPlugin, Observer);
-
 const portfolio = await usePortfolio(true);
 
 const { notionGetProject } = useNotion()
@@ -49,6 +47,7 @@ let isInteracting = false;
 let animationFrameId;
 
 onMounted(async () => {
+  gsap.registerPlugin(ScrollTrigger, Draggable, InertiaPlugin, Observer);
 
   // Let's calculate some starting values
   const cardsContainer = document.querySelector('.cards');
