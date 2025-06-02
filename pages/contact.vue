@@ -44,7 +44,7 @@ useHead({
 
 const { gtag } = useGtag()
 gtag('event', 'page_view', {
-  app_name: 'Thinh Le',
+  page_title: 'Thinh Le - Contact',
   screen_name: 'Contact'
 })
 </script>

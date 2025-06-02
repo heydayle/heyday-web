@@ -8,11 +8,9 @@ import {Observer} from "gsap/Observer";
 
 const { gtag } = useGtag()
 gtag('event', 'page_view', {
-  app_name: 'Thinh Le',
+  page_title: 'Thinh Le - Portfolio',
   screen_name: 'Porfolio'
 })
-
-gsap.registerPlugin(ScrollTrigger, Draggable, InertiaPlugin, Observer);
 
 const portfolio = await usePortfolio(true);
 
@@ -49,6 +47,7 @@ let isInteracting = false;
 let animationFrameId;
 
 onMounted(async () => {
+  gsap.registerPlugin(ScrollTrigger, Draggable, InertiaPlugin, Observer);
 
   // Let's calculate some starting values
   const cardsContainer = document.querySelector('.cards');

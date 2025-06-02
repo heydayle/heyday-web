@@ -26,9 +26,6 @@ export default defineNuxtConfig({
   },
   gtag: {
     id: process.env.GTAG_KEY || 'G-xxxxxxxx',
-    config: {
-      page_title: 'Thinh Le Page'
-    },
   },
   compatibilityDate: '2025-03-05',
   runtimeConfig: {
