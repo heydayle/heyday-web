@@ -8,7 +8,17 @@ function convertNotionDatabase(notionData: any) {
   
     // Extract properties from the Notion data
     const properties = notionData.properties;
-    
+
+    const convertFileIdEncodeURL = (url: string) => {
+    const parsedUrl = new URL(url);
+    const extractedPath = parsedUrl.pathname.split('/').slice(2).join(':')
+      return encodeURIComponent('attachment:' + extractedPath)
+    }
+    const getImageLink = (fileId: string, blockId: string, width: number = 1700, format: string = 'webp'): string => {
+      return `https://www.notion.so/image/${fileId}?table=block&id=${blockId}&format=${format}&width=${width}`
+    }
+    const coverFile = properties.coverUrl.files[0].file.url || null
+    const coverUrl = coverFile ? getImageLink(convertFileIdEncodeURL(properties.coverUrl.files[0].file.url), notionData.id) : '';
     // Helper function to extract text from rich_text property
     const extractText = (richTextArr: any[]) => {
       if (!richTextArr || richTextArr.length === 0) return '';
@@ -33,6 +43,7 @@ function convertNotionDatabase(notionData: any) {
       slug: extractText(properties.slug?.rich_text) || '',
       website: extractText(properties.site?.rich_text) || '',
       cover: extractText(properties.cover?.rich_text) || '',
+      coverUrl: coverUrl || '',
       technologies: extractMultiSelect(properties.tech?.multi_select) || [],
       stack: extractMultiSelect(properties.stack?.multi_select) || [],
       created: notionData.created_time,

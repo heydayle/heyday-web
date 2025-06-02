@@ -4,11 +4,12 @@
     <!-- Video -->
     <NuxtLink :to="'/portfolio/' + currentPortfolioItem['slug']" @click="isActive = false">
       <div class="project-cover__video-container">
-        <video ref="video" :style="mediaStyle" class="project-cover__video mouse-md" loop="true" muted :autoplay="true"
-          playsinline :poster="currentPortfolioItem['cover']">
+        <img :style="mediaStyle" :src="currentPortfolioItem['coverUrl']" alt="" class="project-cover__video mouse-md">
+        <!-- <video ref="video" :style="mediaStyle" class="project-cover__video mouse-md" loop="true" muted :autoplay="true"
+          playsinline :poster="currentPortfolioItem['coverUrl']">
           <source :src="currentPortfolioItem['videoWebm']" type="video/webm">
           <source :src="currentPortfolioItem['videoMP4']" type="video/mp4">
-        </video>
+        </video> -->
       </div>
     </NuxtLink>
 
@@ -146,12 +147,12 @@ onMounted(() => {
 }
 
 .project-cover__video {
-  width: calc(100% + 60px);
-  height: calc(100% + 60px);
+  width: 120%;
+  height: 650px;
   object-fit: cover;
   object-position: center center;
   transform-origin: center center;
-  background-color: #25223d;
+  // background-color: #25223d;
 }
 
 .project-cover--active {
@@ -174,7 +175,7 @@ onMounted(() => {
   object-fit: cover;
   object-position: center center;
   border-radius: 8px;
-  z-index: 2;
+  z-index: 999999;
   opacity: 0;
   transition: opacity 0.3s ease;
 
