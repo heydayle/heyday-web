@@ -4,7 +4,7 @@
     <div class="container">
       <div class="row mt-8">
         <div class="col-auto">
-          <MWIcon type="white" size="120" />
+          <MWIcon type="white" :size="120" />
           <CodeLine :number="'404'" class="mt-5 mt-lg-7 mb-5">
             <span class="code--purple">error:</span>
             <span class="code--yellow">&nbsp;page</span>
