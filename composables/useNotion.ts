@@ -9,13 +9,16 @@ export const useNotion = () => {
     } as any
 
     const postNotion = (dbId: string, query?: any) => {
-        return useFetch(NOTION_API_URL, {
-            ...OPTIONS_API,
-            body: {
-                db_id: dbId,
-                query
-            }
-        })
+        return useAsyncData(NOTION_API_URL, () => 
+            $fetch(NOTION_API_URL, {
+                ...OPTIONS_API,
+                body: {
+                    db_id: dbId,
+                    query
+                }
+            })
+        )
+        
     }
 
     const notionGetAbout = (qarams: any) => {
@@ -24,9 +27,10 @@ export const useNotion = () => {
     const notionGetContent = (qarams: any) => {
         return postNotion(NOTION_DB_CONTENTS_ID, qarams)
     }
-    const notionGetProject = (qarams: any) => {
+    const notionGetProject = (qarams?: any) => {
         return postNotion(NOTION_DB_PROJECTS_ID, qarams)
     }
+
     return {
         notionGetAbout,
         notionGetContent,

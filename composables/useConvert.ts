@@ -1,6 +1,49 @@
+export type Portfolio = {
+  id: string;
+  title: string;
+  name: string;
+  description: string;
+  client: string;
+  role: string;
+  timeframe: string;
+  slug: string;
+  website: string;
+  cover: string;
+  coverUrl: string;
+  technologies: string[];
+  stack: string[];
+  created: string;
+  lastEdited: string;
+};
+
+export type NotionDatabase = {
+  id: string;
+  properties: {
+    title: { rich_text: { plain_text: string }[] };
+    name: { rich_text: { plain_text: string }[] };
+    description: { rich_text: { plain_text: string }[] };
+    client: { rich_text: { plain_text: string }[] };
+    role: { rich_text: { plain_text: string }[] };
+    timeframe: { rich_text: { plain_text: string }[] };
+    slug: { rich_text: { plain_text: string }[] };
+    site: { rich_text: { plain_text: string }[] };
+    cover: { rich_text: { plain_text: string }[] };
+    coverUrl: { files: { file: { url: string } }[] };
+    tech: { multi_select: { name: string }[] };
+    time: { rich_text: { plain_text: string }[] };
+    stack: { multi_select: { name: string }[] };
+    created_time: string;
+    last_edited_time: string;
+  };
+  created_time: string;
+  last_edited_time: string;
+  url: string;
+  icon: { type: string; emoji?: string; external?: { url: string } };
+  archived: boolean;
+}
 export const useConvert = () => {
     
-function convertNotionDatabase(notionData: any) {
+function convertNotionDatabase(notionData: NotionDatabase) {
     // Check if the input is valid
     if (!notionData || !notionData.properties) {
       throw new Error('Invalid Notion data format');
@@ -17,8 +60,9 @@ function convertNotionDatabase(notionData: any) {
     const getImageLink = (fileId: string, blockId: string, width: number = 1700, format: string = 'webp'): string => {
       return `https://www.notion.so/image/${fileId}?table=block&id=${blockId}&format=${format}&width=${width}`
     }
-    const coverFile = properties.coverUrl.files[0].file.url || null
+    const coverFile = properties.coverUrl?.files[0]?.file.url || null
     const coverUrl = coverFile ? getImageLink(convertFileIdEncodeURL(properties.coverUrl.files[0].file.url), notionData.id) : '';
+
     // Helper function to extract text from rich_text property
     const extractText = (richTextArr: any[]) => {
       if (!richTextArr || richTextArr.length === 0) return '';
@@ -48,17 +92,12 @@ function convertNotionDatabase(notionData: any) {
       stack: extractMultiSelect(properties.stack?.multi_select) || [],
       created: notionData.created_time,
       lastEdited: notionData.last_edited_time
-    };
+    } as Portfolio;
   
     return projectData;
   }
   
-  function convertNotionDatabaseBatch(notionPages: any[]) {
-    if (!Array.isArray(notionPages)) {
-      // If single page is provided, convert it
-      return convertNotionDatabase(notionPages);
-    }
-    
+  function convertNotionDatabaseBatch(notionPages: NotionDatabase[]): Portfolio[] {
     return notionPages.map(page => convertNotionDatabase(page));
   }
   

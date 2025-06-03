@@ -68,20 +68,7 @@ useMetadata({
     }
   ],
 })
-
-// const { notionGetProject } = useNotion()
-// const { convertNotionDatabaseBatch } = useConvert()
-
-// const params = {
-//   filter: {
-//     property: "slug",
-//     rich_text: {
-//       equals: "25fit"
-//       }
-//     }
-// }
-// const { data, error } = await notionGetProject()
-// const projects = computed(() => convertNotionDatabaseBatch(data.value.results))
+usePortfolio();
 
 </script>
 

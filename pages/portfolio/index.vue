@@ -12,12 +12,8 @@ gtag('event', 'page_view', {
   screen_name: 'Porfolio'
 })
 
-const portfolio = await usePortfolio(true);
-
-const { notionGetProject } = useNotion()
-const { convertNotionDatabaseBatch } = useConvert()
-const { data, error } = await notionGetProject()
-const portfolioData = computed(() => convertNotionDatabaseBatch(data.value.results))
+const { portfolios } = usePortfolio();
+const portfolioData = portfolios.value
 
 // TODO: Review on mobile and perhaps make the cards a little smaller - need to handle resize event.
 
